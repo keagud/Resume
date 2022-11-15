@@ -1,4 +1,5 @@
 import toml, argparse, json
+from functools import reduce
 
 # parser = argparse.ArgumentParser()
 
@@ -15,25 +16,24 @@ with open(IN_FILE, "r") as infile:
 # print(json.dumps(toml_data, indent=4))
 
 
-def toml_parse(data, level=0, indent=" ", list_item = False) -> list[str]:
-    md_lines = []
+def toml_parse(data, level=0, indent=" ", list_item=False) -> list[str]:
 
-    makeline = lambda c, p="": "".join(((indent * level), p, str(c)))
-    primitive = lambda x: not (isinstance(x, list) or isinstance(x, dict))
+    md_lines: list[str] = []
+    level, prefix = (level, "-") if list_item else (level + 1, "")
 
-    if isinstance(data, dict):
-        for header in data:
-            md_lines.append(('#' * (level + 1)) + " " + header + "\n" )
-            md_lines.extend(toml_parse(data[header], level = level + 1, indent=indent))
+    if type(data) is dict:
+        for header, subdata in data.items():
+            md_lines.append(("#" * level) + " " + header)
+            md_lines.extend(toml_parse(subdata, level=level, indent=indent))
 
-    elif isinstance(data, list):
-        for item in data:
-            item_prefix = "-" if primitive(item) else ""
+    elif type(data) is list:
+        md_lines = reduce(
+            lambda a, b: a + b,
+            [toml_parse(d, level=level, indent=indent, list_item=True) for d in data],
+        )
 
     else:
-        pass
-
-
+        md_lines.append((indent * level) + prefix + str(data))
 
     return md_lines
 
@@ -65,5 +65,6 @@ def toml_parsde(data, level=0, indent=" ", prefix="-") -> list[str]:
 
 md_text_lines = toml_parse(toml_data)
 print(json.dumps(md_text_lines, indent=4))
+
 with open(OUT_FILE, "w") as outfile:
-    outfile.writelines(md_text_lines)
+    outfile.writelines([ m +  "\n"  for m in md_text_lines])
