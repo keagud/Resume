@@ -1,0 +1,265 @@
+\documentclass[11pt]{article}
+
+% ================ PACKAGES ====================
+
+\usepackage[reset, a4paper, margin=6mm, top=7mm, right=4mm]{geometry}
+% text alignment
+\usepackage{ragged2e}
+% loremipsum
+\usepackage{lipsum}
+% text color
+\usepackage{color}
+\usepackage{xcolor}
+% underline
+\usepackage{ulem}
+\usepackage{contour}
+% multiple columns
+\usepackage{paracol}
+% custom fonts
+\usepackage{fontspec}
+% paper bg
+\usepackage{eso-pic}
+% icons
+\usepackage{fontawesome5}
+% hyperlinks
+\usepackage{hyperref}
+% better itemize
+\usepackage{enumitem}
+
+% ================ SETTINGS ====================
+
+\setlist[itemize]{noitemsep, topsep=-2pt, leftmargin=2ex}
+
+\setromanfont{CormorantGaramond}
+\setsansfont{SourceSerifPro}
+\renewcommand{\familydefault}{\rmdefault}
+
+% no page numbers and the sorts
+\thispagestyle{empty}
+% no indentation at beginning of paragraph
+\parindent=0pt
+% for underline
+\renewcommand{\ULdepth}{3pt}
+\renewcommand{\ULthickness}{0.5pt}
+\contourlength{2.0pt}
+
+% for links
+\hypersetup{
+    colorlinks=false,
+    pdfborder = {0 0 0},
+}
+
+% no hyphenation
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+% ================ MACROS ======================
+
+\newfontfamily\titlethin{CormorantGaramond-Light}
+\newfontfamily\titlethick{CormorantGaramond-Medium}
+\newfontfamily\titlebold{CormorantGaramond-Bold}
+\newfontfamily\normaltext{SourceSerifPro}
+
+\newcommand{\resumetitle}[3]{
+    \AddToShipoutPictureBG{
+        \AtPageUpperLeft {
+        \raisebox{-0.09\paperheight}{
+            \color{black!85}\rule{2\paperwidth}{\paperheight}}
+        }}
+    \begin{Center}
+        \begingroup
+        \titlethin
+        \color{black!10}\Huge{#1}
+        \titlethick
+        \color{black!5}\Huge{#2} \\
+        \vspace{2mm}
+        \textrm{\color{black!15}\Large{#3}}
+        \endgroup
+    \end{Center}
+    \vspace{7mm}
+}
+
+\newcommand{\betteruline}[1]{
+    \uline{#1}
+}
+
+\newcommand{\sectiontitle}[1]{
+    \begingroup
+        \titlebold
+        \betteruline{\Large\uppercase{#1}  }
+        \vspace{1.7mm}
+    \endgroup
+}
+
+\newcommand{\sectioncontent}[1]{
+    \begingroup
+        \begin{FlushLeft}
+        \vspace{-3mm}
+        \sffamily\small#1
+        \end{FlushLeft}
+    \endgroup
+    \vspace{2mm}
+}
+
+\newcommand{\job}[3]{
+    \begingroup
+        \textbf{\small#1} - \small#2
+        \hfill\color{black!70}\small{#3}
+    \endgroup
+}
+
+\newcommand{\project}[2]{
+    \begingroup
+        \textbf{\small#1}
+        \hfill\color{black!70}\small{#2}
+    \endgroup
+}
+
+\newcommand{\spacevv}{
+    \vspace{2mm}
+}
+
+\newcommand{\honor}[2]{
+    \textcolor{black!70}{#1} - #2 \\
+    \vspace{1.5mm}
+}
+
+\begin{document}
+    \resumetitle{First-Name}{LastName} {
+        email |
+        phone |
+        address
+    }
+
+    \columnratio{0.31}
+    \setlength{\columnsep}{7mm}
+    \begin{paracol}{2}
+
+    \sectiontitle{about me}
+    \sectioncontent{
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar elementum integer enim neque volutpat ac tincidunt.
+    }
+
+    \sectiontitle{education}
+    \sectioncontent{
+        \textbf{M.Sc. in -} \\
+        University of - \\
+        \textcolor{black!70}{Date - Date} \\
+        \vspace{2mm}
+        \textbf{B.Sc. in -} \\
+        University of - \\
+        \textcolor{black!70}{Date - Date} \\
+    }
+
+    \sectiontitle{links}
+    \sectioncontent{
+        \faIcon{github-alt}\hspace{2mm}
+        \href{example.com}{github} \\
+        \faIcon{linkedin-in}\hspace{2.1mm}
+        \href{example.com}{linkedin} \\
+        \faIcon{link}\hspace{1.8mm}
+        \href{example.com}{website}
+    }
+
+    \sectiontitle{Honors \& Awards}
+    \sectioncontent{
+        \honor{Date}{Lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit amet.}
+        \honor{Date}{ Libero justo laoreet sit amet cursus sit amet.}
+        \honor{Date}{ Est velit egestas dui id ornare arcu odio ut sem. Phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet.}
+
+    }
+
+    \sectiontitle{Hobbies \& Interests}
+    \sectioncontent{
+        Est sit amet facilisis magna etiam.\\
+        Ut eu sem integer vitae justo eget magna fermentum iaculis. \\
+    }
+
+    \switchcolumn
+
+    \sectiontitle{experience}
+    \sectioncontent{
+
+      \job{Name}{Title}{Date}
+      \begin{itemize}
+        \item Dictum varius duis at consectetur lorem donec massa sapien faucibus. Est ultricies integer quis auctor. 
+        \item Et ligula ullamcorper malesuada proin libero. 
+      \end{itemize}
+      \spacevv
+
+      \job{Name}{Title}{Date}
+      \begin{itemize}
+        \item Aliquet nec ullamcorper sit amet risus. 
+        \item Ultrices neque ornare aenean euismod elementum nisi quis. Sed elementum tempus egestas sed.
+      \end{itemize}
+    }
+
+    \sectiontitle{personal projects}
+    \sectioncontent{
+
+        \project{\href{example.com}{name}}{date}
+        \begin{itemize}
+            \item  Libero enim sed faucibus turpis in. 
+            \item Eu mi bibendum neque egestas congue quisque. Quis vel eros donec ac. Congue nisi vitae suscipit tellus mauris a diam maecenas sed.
+        \end{itemize}
+        \spacevv
+
+        \project{\href{example.com}{name}}{date}
+        \begin{itemize}
+            \item Id ornare arcu odio ut sem nulla. 
+            \item Id porta nibh venenatis cras. 
+        \end{itemize}
+        \spacevv
+       
+        \project{\href{example.com}{name}}{date}
+        \begin{itemize}
+            \item  Libero enim sed faucibus turpis in. 
+            \item Eu mi bibendum neque egestas congue quisque. Quis vel eros donec ac. Congue nisi vitae suscipit tellus mauris a diam maecenas sed.
+        \end{itemize}
+        \spacevv
+
+        \project{\href{example.com}{name}}{date}
+        \begin{itemize}
+            \item Id ornare arcu odio ut sem nulla. 
+            \item Id porta nibh venenatis cras. 
+        \end{itemize}
+        \spacevv
+    }
+
+    \sectiontitle{volunteering}
+    \sectioncontent{
+      
+          \job{Name}{Title}{Date}
+          \begin{itemize}
+            \item Dictum varius duis at consectetur lorem donec massa sapien faucibus. Est ultricies integer quis auctor. 
+            \item Et ligula ullamcorper malesuada proin libero. 
+          \end{itemize}
+          \spacevv
+        
+          \job{Name}{Title}{Date}
+          \begin{itemize}
+            \item Aliquet nec ullamcorper sit amet risus. 
+            \item Ultrices neque ornare aenean euismod elementum nisi quis. Sed elementum tempus egestas sed.
+          \end{itemize}
+        
+          \job{Name}{Title}{Date}
+          \begin{itemize}
+            \item Dictum varius duis at consectetur lorem donec massa sapien faucibus. Est ultricies integer quis auctor. 
+            \item Et ligula ullamcorper malesuada proin libero. 
+          \end{itemize}
+          \spacevv
+        
+          \job{Name}{Title}{Date}
+          \begin{itemize}
+            \item Aliquet nec ullamcorper sit amet risus. 
+            \item Ultrices neque ornare aenean euismod elementum nisi quis. Sed elementum tempus egestas sed.
+          \end{itemize}
+    }
+
+    \normaltext \hfill \tiny Last updated \today
+
+    \end{paracol}
+
+\end{document}
