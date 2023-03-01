@@ -58,11 +58,11 @@
 
 % ================ MACROS ======================
 
-\newfontfamily\titlethin[Path=/usr/share/fonts/gnu-free/]{FreeSerif.otf}
-\newfontfamily\titlethick[Path=/usr/share/fonts/gnu-free/]{FreeSerif.otf}
-\newfontfamily\titlebold[Path=/usr/share/fonts/gnu-free/]{FreeSerif.otf}
+\newfontfamily\titlethin[Path=/usr/share/fonts/gnu-free/]{FreeSerif}
+\newfontfamily\titlethick[Path=/usr/share/fonts/gnu-free/]{FreeSerifBold}
+\newfontfamily\titlebold[Path=/usr/share/fonts/gnu-free/]{FreeSerifBold}
 
-\newfontfamily\normaltext[Path=/usr/share/fonts/gnu-free/]{FreeSerif.otf}
+\newfontfamily\normaltext[Path=/usr/share/fonts/gnu-free/]{FreeSerif}
 
 \newcommand{\resumetitle}[3]{
     \AddToShipoutPictureBG{
@@ -129,7 +129,7 @@
 }
 
 \begin{document}
-    \resumetitle{First-Name}{LastName} {
+    \resumetitle{Keaton}{Guderian} {
         email |
         phone |
         address
@@ -144,17 +144,6 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar elementum integer enim neque volutpat ac tincidunt.
     }
 
-    \sectiontitle{education}
-    \sectioncontent{
-        \textbf{M.Sc. in -} \\
-        University of - \\
-        \textcolor{black!70}{Date - Date} \\
-        \vspace{2mm}
-        \textbf{B.Sc. in -} \\
-        University of - \\
-        \textcolor{black!70}{Date - Date} \\
-    }
-
     \sectiontitle{links}
     \sectioncontent{
         \faIcon{github-alt}\hspace{2mm}
@@ -165,6 +154,8 @@
         \href{example.com}{website}
     }
 
+    \iffalse
+
     \sectiontitle{Honors \& Awards}
     \sectioncontent{
         \honor{Date}{Lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit amet.}
@@ -172,6 +163,8 @@
         \honor{Date}{ Est velit egestas dui id ornare arcu odio ut sem. Phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet.}
 
     }
+
+      \fi
 
     \sectiontitle{Hobbies \& Interests}
     \sectioncontent{
@@ -181,20 +174,46 @@
 
     \switchcolumn
 
-    \sectiontitle{experience}
+
+    \sectiontitle{education}
+    \sectioncontent{
+      
+        \begingroup
+      \textit{University of Washington, Seattle }\hfill\color{black!70}\small{2016-2020}
+
+        \endgroup
+
+
+    \begin{itemize}
+
+      \item Academic Overview
+
+        \begin{itemize}
+          \item Overall GPA: 3.88
+          \item Made the Dean's List for every term that met the credit requirement (all but 2)
+          \item Phi Beta Kappa member since 2018
+        \end{itemize}
+      \item \textit{Bachelor of Arts, Linguistics }
+        \begin{itemize}
+          \item a
+
+        \end{itemize}
+      \item \textit{Bachelor of Science, Speech \& Hearing Science}
+
+        \begin{itemize}
+          \item b
+        \end{itemize}
+    \end{itemize}
+
+          
+      } 
+    
+    \sectiontitle{Skills}
     \sectioncontent{
 
-      \job{Name}{Title}{Date}
       \begin{itemize}
         \item Dictum varius duis at consectetur lorem donec massa sapien faucibus. Est ultricies integer quis auctor. 
         \item Et ligula ullamcorper malesuada proin libero. 
-      \end{itemize}
-      \spacevv
-
-      \job{Name}{Title}{Date}
-      \begin{itemize}
-        \item Aliquet nec ullamcorper sit amet risus. 
-        \item Ultrices neque ornare aenean euismod elementum nisi quis. Sed elementum tempus egestas sed.
       \end{itemize}
     }
 
@@ -215,52 +234,38 @@
         \end{itemize}
         \spacevv
        
-        \project{\href{example.com}{name}}{date}
-        \begin{itemize}
-            \item  Libero enim sed faucibus turpis in. 
-            \item Eu mi bibendum neque egestas congue quisque. Quis vel eros donec ac. Congue nisi vitae suscipit tellus mauris a diam maecenas sed.
-        \end{itemize}
-        \spacevv
+        \project{\href{https://github.com/keagud/dateparse}{Dateparse}}{Python}
+        TODO
 
-        \project{\href{example.com}{name}}{date}
-        \begin{itemize}
-            \item Id ornare arcu odio ut sem nulla. 
-            \item Id porta nibh venenatis cras. 
-        \end{itemize}
-        \spacevv
-    }
+               \spacevv
 
-    \sectiontitle{volunteering}
-    \sectioncontent{
-      
-          \job{Name}{Title}{Date}
-          \begin{itemize}
-            \item Dictum varius duis at consectetur lorem donec massa sapien faucibus. Est ultricies integer quis auctor. 
-            \item Et ligula ullamcorper malesuada proin libero. 
-          \end{itemize}
-          \spacevv
-        
-          \job{Name}{Title}{Date}
-          \begin{itemize}
-            \item Aliquet nec ullamcorper sit amet risus. 
-            \item Ultrices neque ornare aenean euismod elementum nisi quis. Sed elementum tempus egestas sed.
-          \end{itemize}
-        
-          \job{Name}{Title}{Date}
-          \begin{itemize}
-            \item Dictum varius duis at consectetur lorem donec massa sapien faucibus. Est ultricies integer quis auctor. 
-            \item Et ligula ullamcorper malesuada proin libero. 
-          \end{itemize}
-          \spacevv
-        
-          \job{Name}{Title}{Date}
-          \begin{itemize}
-            \item Aliquet nec ullamcorper sit amet risus. 
-            \item Ultrices neque ornare aenean euismod elementum nisi quis. Sed elementum tempus egestas sed.
-          \end{itemize}
-    }
+        \project{\href{https://github.com/keagud/linelog}{Linelog}}{Python}
+
+        TODO
+                \spacevv
+
+
+    %  \iffalse
+
+        \project{\href{https://github.com/keagud/verba}{Verba Whitakari}}{C++, Python, CMake}
+
+A complete port of the classic Latin morphological analysis and dictionary tool \href {https://en.wikipedia.org/wiki/William\_Whitaker\%27s\_Words>}William Whitaker's Words, translated and refactored from the original 1993 Ada program into modern C++. This project aims to maintain the functionality of the original in a form that can be better preserved into the future (Ada build systems are not trivial to work with in \$CURRENT\_YEAR) while improving performance and ease of use. 
+
+
+    
+
+              
+    %    \fi
+}    
+
+
+
+
+    \iffalse
 
     \normaltext \hfill \tiny Last updated \today
+
+    \fi
 
     \end{paracol}
 
