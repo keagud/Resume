@@ -30,8 +30,9 @@
 
 \setlist[itemize]{noitemsep, topsep=-2pt, leftmargin=2ex}
 
-\setromanfont{CormorantGaramond}
-\setsansfont{SourceSerifPro}
+\setromanfont[Path=/usr/share/fonts/gnu-free/]{FreeSerif.otf}
+\setsansfont[Path=/usr/share/fonts/gnu-free/]{FreeSans.otf}
+
 \renewcommand{\familydefault}{\rmdefault}
 
 % no page numbers and the sorts
@@ -57,10 +58,11 @@
 
 % ================ MACROS ======================
 
-\newfontfamily\titlethin{CormorantGaramond-Light}
-\newfontfamily\titlethick{CormorantGaramond-Medium}
-\newfontfamily\titlebold{CormorantGaramond-Bold}
-\newfontfamily\normaltext{SourceSerifPro}
+\newfontfamily\titlethin[Path=/usr/share/fonts/gnu-free/]{FreeSerif.otf}
+\newfontfamily\titlethick[Path=/usr/share/fonts/gnu-free/]{FreeSerif.otf}
+\newfontfamily\titlebold[Path=/usr/share/fonts/gnu-free/]{FreeSerif.otf}
+
+\newfontfamily\normaltext[Path=/usr/share/fonts/gnu-free/]{FreeSerif.otf}
 
 \newcommand{\resumetitle}[3]{
     \AddToShipoutPictureBG{
