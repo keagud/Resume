@@ -26,12 +26,24 @@
 % better itemize
 \usepackage{enumitem}
 
+\usepackage[abspath]{currfile}
+
 % ================ SETTINGS ====================
 
 \setlist[itemize]{noitemsep, topsep=-2pt, leftmargin=2ex}
 
-\setromanfont[Path=/usr/share/fonts/gnu-free/]{FreeSerif.otf}
-\setsansfont[Path=/usr/share/fonts/gnu-free/]{FreeSans.otf}
+
+%\setmainfont[
+%  Path = /usr/share/fonts/plex,
+%  Ligatures = Tex,
+%  UprightFont = fonts/IBMPlexSerif-Medium,
+%  BoldItalicFont = fonts/IBMPlexSerif-BoldItalic.otf,
+%  BoldFont = fonts/IBMPlexSerif-Bold.otf,
+%  ItalicFont = fonts/IBMPlexSerif-Italic.otf ] {PlexSerif}
+
+\setmainfont{IBM Plex Serif}
+%\setromanfont[Path = /usr/share/fonts/plex/]{IBMPlexSerif-Regular.otf}
+\setsansfont{IBM Plex Sans}
 
 \renewcommand{\familydefault}{\rmdefault}
 
@@ -46,8 +58,8 @@
 
 % for links
 \hypersetup{
-    colorlinks=false,
-    pdfborder = {0 0 0},
+  urlbordercolor=gray,
+ pdfborderstyle={/S/U/W 1}
 }
 
 % no hyphenation
@@ -58,11 +70,11 @@
 
 % ================ MACROS ======================
 
-\newfontfamily\titlethin[Path=/usr/share/fonts/gnu-free/]{FreeSerif}
-\newfontfamily\titlethick[Path=/usr/share/fonts/gnu-free/]{FreeSerifBold}
-\newfontfamily\titlebold[Path=/usr/share/fonts/gnu-free/]{FreeSerifBold}
+\newfontfamily\titlethin[Path=/usr/share/fonts/plex/]{IBMPlexSerif-Regular}
+\newfontfamily\titlethick[Path=/usr/share/fonts/plex/]{IBMPlexSerif-SemiBold}
+\newfontfamily\titlebold[Path=/usr/share/fonts/plex/]{IBMPlexSerif-Bold}
 
-\newfontfamily\normaltext[Path=/usr/share/fonts/gnu-free/]{FreeSerif}
+\newfontfamily\normaltext[Path=/usr/share/fonts/plex/]{IBMPlexSerif-Regular}
 
 \newcommand{\resumetitle}[3]{
     \AddToShipoutPictureBG{
@@ -130,26 +142,19 @@
 
 \begin{document}
     \resumetitle{Keaton}{Guderian} {
-        email |
-        phone |
-        address
+      keagud@protonmail.com | (206)-321-2181
     }
 
-    \columnratio{0.31}
+    \columnratio{0.35}
     \setlength{\columnsep}{7mm}
     \begin{paracol}{2}
-
-    \sectiontitle{about me}
-    \sectioncontent{
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar elementum integer enim neque volutpat ac tincidunt.
-    }
 
     \sectiontitle{links}
     \sectioncontent{
         \faIcon{github-alt}\hspace{2mm}
-        \href{example.com}{github} \\
-        \faIcon{linkedin-in}\hspace{2.1mm}
-        \href{example.com}{linkedin} \\
+        \href{https://github.com/keagud}{github} \\
+      %  \faIcon{linkedin-in}\hspace{2.1mm}
+      %  \href{example.com}{linkedin} \\
         \faIcon{link}\hspace{1.8mm}
         \href{example.com}{website}
     }
@@ -161,112 +166,109 @@
         \honor{Date}{Lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit amet.}
         \honor{Date}{ Libero justo laoreet sit amet cursus sit amet.}
         \honor{Date}{ Est velit egestas dui id ornare arcu odio ut sem. Phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet.}
-
     }
-
       \fi
+    \sectiontitle{education}
+    \sectioncontent{
+        \begingroup
+      \textit{University of Washington, Seattle }\hfill\color{black!70}\small{2016-2020}
+        \endgroup
+      \begin{itemize}
+      \item Overall GPA: 3.88, graduated \textit{Cum Laude}
+      \item Made the Dean's List for every term that met the credit requirement (all but 2)
+      \item Phi Beta Kappa member since 2018
+        \end{itemize}
+      \item \textbf{Bachelor of Arts, Linguistics }
+        \begin{itemize}
+          \item \textit{Curriculum included courses on theory of syntax, formal logic, and computational linguistics with natural language processing. }
+
+        \end{itemize}
+      \item \textbf{Bachelor of Science, Speech \& Hearing Science}
+        \begin{itemize}
+          \item \textit{Curriculum included courses on physics and signal processing theory.}
+        \end{itemize}
+
+      } 
 
     \sectiontitle{Hobbies \& Interests}
     \sectioncontent{
-        Est sit amet facilisis magna etiam.\\
-        Ut eu sem integer vitae justo eget magna fermentum iaculis. \\
+      \begin{itemize}
+        \item Ancient languages \\ (Latin, Attic Greek)
+        \item Ancient languages \\  (Lisp, C89, Ada)
+        \item \href{https://en.wikipedia.org/wiki/Constructed\_language}{Conlanging}
+        \item Distance running, cycling
+
+      \end{itemize}
     }
 
     \switchcolumn
 
-
-    \sectiontitle{education}
-    \sectioncontent{
-      
-        \begingroup
-      \textit{University of Washington, Seattle }\hfill\color{black!70}\small{2016-2020}
-
-        \endgroup
-
-
-    \begin{itemize}
-
-      \item Academic Overview
-
-        \begin{itemize}
-          \item Overall GPA: 3.88
-          \item Made the Dean's List for every term that met the credit requirement (all but 2)
-          \item Phi Beta Kappa member since 2018
-        \end{itemize}
-      \item \textit{Bachelor of Arts, Linguistics }
-        \begin{itemize}
-          \item a
-
-        \end{itemize}
-      \item \textit{Bachelor of Science, Speech \& Hearing Science}
-
-        \begin{itemize}
-          \item b
-        \end{itemize}
-    \end{itemize}
-
-          
-      } 
     
-    \sectiontitle{Skills}
+    \sectiontitle{Technical Skills}
     \sectioncontent{
-
       \begin{itemize}
-        \item Dictum varius duis at consectetur lorem donec massa sapien faucibus. Est ultricies integer quis auctor. 
-        \item Et ligula ullamcorper malesuada proin libero. 
+        \item \textbf{Programming Languages: }
+          \begin{itemize}
+            \item Proficient: \textit{Python} 
+            \item Competent: \textit{C, C++, Javascript/Typescript}
+            \item Actively Learning: \textit{Rust, PureScript}
+          \end{itemize}
+
+        \item \textbf{Other Technical Skills:}
+          \begin{itemize}
+            \item  Linux user for all personal computing needs for the past 7 years, adept in most common command line utilities in the Linux/Unix environment (bash/zsh, sed, grep, ssh, vim...), as well as the Unix filesystem architecture and API
+            \item Experienced with the use of version control with Git
+            \item Proficient in digital typesetting with \LaTeX
+          \end{itemize}
       \end{itemize}
     }
-
-    \sectiontitle{personal projects}
+    \sectiontitle{projects}
     \sectioncontent{
-
-        \project{\href{example.com}{name}}{date}
+      \project{\href{example.com}{Della}}{Python}
         \begin{itemize}
-            \item  Libero enim sed faucibus turpis in. 
-            \item Eu mi bibendum neque egestas congue quisque. Quis vel eros donec ac. Congue nisi vitae suscipit tellus mauris a diam maecenas sed.
+
+          \item A personal orginizer similar to TaskWarrior, with the added feature of natural language processing to allow todos to be managed with a simple, naturalistic command syntax, e.g. "pick up Dave at the airport a week from this Wednesday." 
+          \item Users can interact with and view their upcoming tasks either from the command line, or from a terminal graphical interface. 
+          %\item Tasks can be set to sync to a server for access from multiple devices
+        \end{itemize}
+      
+        \spacevv
+        \iffalse
+        %%%%%%%%%%%%%%%%%%
+        \project{\href{example.com}{Quackbot}}{Javascript, Typescript}
+        \begin{itemize}
+            \item A discord bot with a large variety of features 
         \end{itemize}
         \spacevv
+        %%%%%%%%%%%%%%5
+        \fi
 
-        \project{\href{example.com}{name}}{date}
-        \begin{itemize}
-            \item Id ornare arcu odio ut sem nulla. 
-            \item Id porta nibh venenatis cras. 
-        \end{itemize}
-        \spacevv
-       
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         \project{\href{https://github.com/keagud/dateparse}{Dateparse}}{Python}
-        TODO
+        \begin{itemize}
 
-               \spacevv
+          \item A pure Python, dependency-free library for parsing natural language expressions about time into Python
+        \end{itemize}
+        \spacevv
 
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         \project{\href{https://github.com/keagud/linelog}{Linelog}}{Python}
+        \begin{itemize}
+          \item A development productivity tool that calculates the number of lines of code commited in Git by a given user, over a given interval of time, and displays the results as a curses-style graph on the command line broken down by language.
+          \item The definition of a ``line'' is on a langugage-by-langauge basis;  for example, a line starting with \# in Python is a comment and should be ignored, but in C the same line is a preprocessor directive that should be counted. 
+          \item Users can fully customize this behavior via a YAML configuration file. 
+        \end{itemize}
+        \spacevv
+        %%%%%%%%%%%%%%%%%%
 
-        TODO
-                \spacevv
-
-
-    %  \iffalse
-
+      \iffalse
         \project{\href{https://github.com/keagud/verba}{Verba Whitakari}}{C++, Python, CMake}
-
-A complete port of the classic Latin morphological analysis and dictionary tool \href {https://en.wikipedia.org/wiki/William\_Whitaker\%27s\_Words>}William Whitaker's Words, translated and refactored from the original 1993 Ada program into modern C++. This project aims to maintain the functionality of the original in a form that can be better preserved into the future (Ada build systems are not trivial to work with in \$CURRENT\_YEAR) while improving performance and ease of use. 
-
-
-    
-
-              
-    %    \fi
-}    
-
-
-
-
-    \iffalse
-
-    \normaltext \hfill \tiny Last updated \today
-
-    \fi
-
+        \begin{itemize}
+          \item A complete port of the classic Latin morphological analysis and dictionary tool \href{https://en.wikipedia.org/wiki/William\_Whitaker\%27s\_Words>}{William Whitaker's Words}, translated and refactored from the original 1993 Ada program into modern C++. This project aims to maintain the functionality of the original in a form that can be better preserved into the future (Ada build systems are not trivial to work with in \$CURRENT\_YEAR) while improving performance and ease of use. 
+        \end{itemize}    
+        \fi
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+}
     \end{paracol}
 
 \end{document}
