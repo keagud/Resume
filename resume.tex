@@ -32,18 +32,25 @@
 
 \setlist[itemize]{noitemsep, topsep=-2pt, leftmargin=2ex}
 
+\setmainfont{IBMPlexSerif} [
+  Extension = .otf , 
+  Path = fonts/ ,
+  UprightFont = *-Regular ,
+  ItalicFont = *-Italic , 
+  BoldFont = *-Bold ,
+  BoldItalicFont = *-BoldItalic ]
 
-%\setmainfont[
-%  Path = /usr/share/fonts/plex,
-%  Ligatures = Tex,
-%  UprightFont = fonts/IBMPlexSerif-Medium,
-%  BoldItalicFont = fonts/IBMPlexSerif-BoldItalic.otf,
-%  BoldFont = fonts/IBMPlexSerif-Bold.otf,
-%  ItalicFont = fonts/IBMPlexSerif-Italic.otf ] {PlexSerif}
 
-\setmainfont{IBM Plex Serif}
-%\setromanfont[Path = /usr/share/fonts/plex/]{IBMPlexSerif-Regular.otf}
-\setsansfont{IBM Plex Sans}
+
+
+\setsansfont{IBMPlexSans} [
+  Extension = .otf , 
+  Path = fonts/ ,
+  UprightFont = *-Regular ,
+  ItalicFont = *-Italic , 
+  BoldFont = *-Bold ,
+  BoldItalicFont = *-BoldItalic ]
+
 
 \renewcommand{\familydefault}{\rmdefault}
 
@@ -70,11 +77,11 @@
 
 % ================ MACROS ======================
 
-\newfontfamily\titlethin[Path=/usr/share/fonts/plex/]{IBMPlexSerif-Regular}
-\newfontfamily\titlethick[Path=/usr/share/fonts/plex/]{IBMPlexSerif-SemiBold}
-\newfontfamily\titlebold[Path=/usr/share/fonts/plex/]{IBMPlexSerif-Bold}
+\newfontfamily\titlethin[Path=fonts/]{IBMPlexSerif-Regular}
+\newfontfamily\titlethick[Path=fonts/]{IBMPlexSerif-SemiBold}
+\newfontfamily\titlebold[Path=fonts/]{IBMPlexSerif-Bold}
 
-\newfontfamily\normaltext[Path=/usr/share/fonts/plex/]{IBMPlexSerif-Regular}
+\newfontfamily\normaltext[Path=fonts/]{IBMPlexSerif-Regular}
 
 \newcommand{\resumetitle}[3]{
     \AddToShipoutPictureBG{
