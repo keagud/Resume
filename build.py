@@ -29,4 +29,11 @@ shutil.copy(target_path, os.path.join(build_dir, f"{target_noext}.tex"))
 os.chdir(build_dir)
 
 
-subprocess.run(f"xelatex {target_noext}.tex", shell=True)
+subprocess.run(f"xelatex {target_noext}.tex", shell=True).check_returncode()
+
+
+shutil.copy(f"{target_noext}.pdf", "..")
+
+
+
+
