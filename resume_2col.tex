@@ -152,16 +152,19 @@
       keagud@protonmail.com | (206)-321-2181
     }
 
+    \columnratio{0.35}
+    \setlength{\columnsep}{7mm}
+    \begin{paracol}{2}
 
-
-        \faIcon{github-alt}
-        \href{https://github.com/keagud}{github} \hspace{5mm} 
+    \sectiontitle{links}
+    \sectioncontent{
+        \faIcon{github-alt}\hspace{2mm}
+        \href{https://github.com/keagud}{github} \\
       %  \faIcon{linkedin-in}\hspace{2.1mm}
       %  \href{example.com}{linkedin} \\
-        \faIcon{link}
-        \href{keagud.github.io}{website} \\
-
-        \spacevv
+        \faIcon{link}\hspace{1.8mm}
+        \href{keagud.github.io}{website}
+    }
 
     \sectiontitle{education}
     \sectioncontent{
@@ -183,12 +186,21 @@
 
         \end{itemize}
       \item \textbf{Bachelor of Science, Speech \& Hearing Science}
-
-            \begin{itemize}
-              \item Curriculum included courses on physics, acoustics, and signal processing theory.
-            \end{itemize}
-
       } 
+
+    \sectiontitle{Hobbies \& Interests}
+    \sectioncontent{
+      \begin{itemize}
+        \item Ancient languages \\ (Latin, Attic Greek)
+        \item Ancient languages \\  (Lisp, C89, Ada)
+        \item \href{https://en.wikipedia.org/wiki/Constructed\_language}{Conlanging}
+        \item Distance running, cycling
+
+      \end{itemize}
+    }
+
+    \switchcolumn
+
     
     \sectiontitle{Technical Skills}
     \sectioncontent{
@@ -254,19 +266,6 @@
         \fi
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 }
-
-    \sectiontitle{Hobbies \& Interests}
-    \sectioncontent{
-      \begin{itemize}
-        \item Ancient languages  (Latin, Attic Greek)
-        \item Ancient languages   (Lisp, C89, Ada)
-        \item \href{https://en.wikipedia.org/wiki/Constructed\_language}{Conlanging}
-        \item Distance running, cycling
-
-      \end{itemize}
-    }
-
-
-
+    \end{paracol}
 
 \end{document}

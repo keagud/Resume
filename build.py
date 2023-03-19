@@ -10,7 +10,7 @@ if len(sys.argv) > 1:
 
 target_noext, _ = os.path.splitext(target_filename)
 target_path = os.path.join(os.getcwd(), target_filename)
-build_dir = os.path.join(os.getcwd(), f"build")
+build_dir = os.path.join(os.getcwd(), f"_build")
 os.makedirs(build_dir, exist_ok=True)
 
 fonts_dir = Path("./fonts").resolve().absolute()
