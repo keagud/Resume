@@ -152,16 +152,19 @@
       keagud@protonmail.com | (206)-321-2181
     }
 
+    \columnratio{0.35}
+    \setlength{\columnsep}{7mm}
+    \begin{paracol}{2}
 
-
-        \faIcon{github-alt}
-        \href{https://github.com/keagud}{github} \hspace{5mm} 
+    \sectiontitle{links}
+    \sectioncontent{
+        \faIcon{github-alt}\hspace{2mm}
+        \href{https://github.com/keagud}{github.com/keagud} \\
       %  \faIcon{linkedin-in}\hspace{2.1mm}
       %  \href{example.com}{linkedin} \\
-        \faIcon{link}
-        \href{keagud.github.io}{website} \\
-
-        \spacevv
+        \faIcon{link}\hspace{1.8mm}
+        \href{keagud.github.io}{keagud.github.io}
+    }
 
     \sectiontitle{education}
     \sectioncontent{
@@ -183,27 +186,36 @@
 
         \end{itemize}
       \item \textbf{Bachelor of Science, Speech \& Hearing Science}
-
-            \begin{itemize}
-              \item Curriculum included courses on physics, acoustics, and signal processing theory.
-            \end{itemize}
-
       } 
+
+    \sectiontitle{Hobbies \& Interests}
+    \sectioncontent{
+      \begin{itemize}
+        \item Ancient languages \\ (Latin, Attic Greek)
+        \item Ancient languages \\  (Lisp, C89, Ada)
+        \item \href{https://en.wikipedia.org/wiki/Constructed\_language}{Conlanging}
+        \item Distance running, cycling
+
+      \end{itemize}
+    }
+
+    \switchcolumn
+
     
     \sectiontitle{Technical Skills}
     \sectioncontent{
       \begin{itemize}
         \item \textbf{Programming Languages: }
           \begin{itemize}
-            \item \textit{Proficient:} Python 
-            \item \textit{Competent}: C, C++, Javascript/Typescript
-            \item \textit{Actively Learning:} Rust, Java, HTML/CSS
+            \item \textit{Proficient:} Python, C, C++, Javascript/Typescript
+            \item \textit{Actively Learning:} Rust, Java
           \end{itemize}
 
         \item \textbf{Other Technical Skills:}
           \begin{itemize}
             \item  Linux user for all personal computing needs for the past 7 years, adept in most common command line utilities in the Linux/Unix environment (bash/zsh, sed, grep, ssh, vim...), as well as the Unix filesystem architecture and API
             \item Experienced with the use of version control with Git
+            \item Familiar with cloud application development and deployment methods, with experience especially in the Google Cloud Compute platform
             \item \href{https://github.com/keagud/resume}{Proficient in digital typesetting with \LaTeX}
           \end{itemize}
       \end{itemize}
@@ -211,32 +223,33 @@
     \sectiontitle{projects}
     \sectioncontent{
       %%%%%%%%%%%%%%%%%%%%%%%%%
-      \iffalse
       \project{\href{https://github.com/keagud/della}{Della}}{Python}
         \begin{itemize}
           \item A personal orginizer similar to TaskWarrior, with the added feature of natural language processing to allow todos to be managed with a simple, naturalistic command syntax, e.g. "pick up Dave at the airport a week from this Wednesday." 
           \item Users can interact with and view their upcoming tasks either from the command line, or from a terminal graphical interface. 
-          %\item Tasks can be set to sync to a server for access from multiple devices
+          \item Tasks can be set to sync to a server for access from multiple devices.
         \end{itemize}
         \spacevv
-        \fi
         %%%%%%%%%%%%%%%%%%%%%%%
-        \iffalse
+        
         %%%%%%%%%%%%%%%%%%%%%%%%%
         \project{\href{https://github.com/keagud/Quackbot}{Quackbot}}{Javascript, Typescript}
         \begin{itemize}
-            \item A Discord bot  
+            \item A Discord bot with a modular design, allowing features and commands to be easily swapped out. 
+            \item Current functionality includes: fortune telling with a simulated Tarot deck, generation of images based on a macro, user search of Wikipedia or Etymonline
         \end{itemize}
         \spacevv
         %%%%%%%%%%%%%%5
-        \fi
 
+        
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \iffalse
         \project{\href{https://github.com/keagud/dateparse}{Dateparse}}{Python}
         \begin{itemize}
           \item A pure Python, dependency-free library for parsing natural language expressions about time, like "two weeks ago", "a week before Christmas", "in four months" into Python date objects. 
         \end{itemize}
         \spacevv
+        \fi
 
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         \project{\href{https://github.com/keagud/linelog}{Linelog}}{Python}
@@ -254,19 +267,6 @@
         \fi
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 }
-
-    \sectiontitle{Hobbies \& Interests}
-    \sectioncontent{
-      \begin{itemize}
-        \item Ancient languages  (Latin, Attic Greek)
-        \item Ancient languages   (Lisp, C89, Ada)
-        \item \href{https://en.wikipedia.org/wiki/Constructed\_language}{Conlanging}
-        \item Distance running, cycling
-
-      \end{itemize}
-    }
-
-
-
+    \end{paracol}
 
 \end{document}
