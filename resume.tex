@@ -200,8 +200,8 @@
     }
 
     \switchcolumn
-
     
+
     \sectiontitle{Technical Skills}
     \sectioncontent{
       \begin{itemize}
@@ -215,19 +215,37 @@
           \begin{itemize}
             \item  Linux user for all personal computing needs for the past 7 years, adept in most common command line utilities in the Linux/Unix environment (bash/zsh, sed, grep, ssh, vim...), as well as the Unix filesystem architecture and API
             \item Experienced with the use of version control with Git
-            \item Familiar with cloud application development and deployment methods, with experience especially in the Google Cloud Compute platform
-            \item \href{https://github.com/keagud/resume}{Proficient in digital typesetting with \LaTeX}
           \end{itemize}
       \end{itemize}
     }
+
+        \sectiontitle{Experience} 
+        \sectioncontent{
+        \begingroup
+      \textbf{Technical Consultant - Ikolith Recreations}\hfill\color{black!70}\small{2020-2022}
+        \endgroup
+      \begin{itemize}
+          \item Technical and creative work with a local Seattle-based independent tabletop game studio. 
+              \begin{itemize}
+                  \item Wrote and managed utility scripts, mostly in Python and bash, to automate workflow tasks such as document formatting.
+                    \item Developed an automated pipeline to convert and compile Markdown documentation into Latex for publication.
+                    \item Created a program to partially simulate the evolution of a fictional language over time as a worldbuilding and writing aid.
+                        
+                        
+              \end{itemize}
+        \end{itemize}
+        }
+
+
+        
     \sectiontitle{projects}
     \sectioncontent{
       %%%%%%%%%%%%%%%%%%%%%%%%%
       \project{\href{https://github.com/keagud/della}{Della}}{Python}
         \begin{itemize}
           \item A personal orginizer similar to TaskWarrior, with the added feature of natural language processing to allow todos to be managed with a simple, naturalistic command syntax, e.g. "pick up Dave at the airport a week from this Wednesday." 
-          \item Users can interact with and view their upcoming tasks either from the command line, or from a terminal graphical interface. 
-          \item Tasks can be set to sync to a server for access from multiple devices.
+          \item Users can interact with and view their upcoming tasks either from the command line, or from a formatted prompt featuring full syntax highlighting. Tasks can be set to sync to a server for access from multiple devices.
+          \item Written in pure \textbf{Python}; remote syncing is handled over \textbf{SSH} via the \textbf{Paramiko} library.
         \end{itemize}
         \spacevv
         %%%%%%%%%%%%%%%%%%%%%%%
@@ -235,8 +253,8 @@
         %%%%%%%%%%%%%%%%%%%%%%%%%
         \project{\href{https://github.com/keagud/Quackbot}{Quackbot}}{Javascript, Typescript}
         \begin{itemize}
-            \item A Discord bot with a modular design, allowing features and commands to be easily swapped out. 
-            \item Current functionality includes: fortune telling with a simulated Tarot deck, generation of images based on a macro, user search of Wikipedia or Etymonline
+            \item A Discord bot with a modular design, allowing features and commands to be easily swapped out. Current functionality includes: fortune telling with a simulated Tarot deck, generation of images based on a macro, user search of Wikipedia. 
+            \item Written in \textbf{Typescript} and \textbf{Javascript} using \textbf{Node.js} and \textbf{npm}. Hosted on \textbf{Google Cloud} with building and deployment fully automated using a \textbf{Github Actions CI/CD } workflow script.
         \end{itemize}
         \spacevv
         %%%%%%%%%%%%%%5
