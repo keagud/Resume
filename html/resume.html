@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <title>resume</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <meta name="description" content="" />
+
+  <link rel="icon" href="favicon.png">
+
+</head>
+
+<body>
+
+  <div class = "resume-section" id = "basic-info">
+    <h1 id = "full-name">{{ basic_info.firstname }} {{ basic_info.lastname }}</h1>
+
+    <div id = "contact"> 
+
+      <div id = "phone">{{ contact.phone }}</div>
+      <div id = "email"> {{ contact.email }} </div>
+
+    </div>
+
+    <div id = "links"> 
+      <div id = "website"> 
+        <a href = {{ links.website }} >Website</a>
+      </div>
+
+      <div id = "github"> 
+        <a href = {{ links.github }} >Github</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class "resume-section" id = "education"> </div>
+  <div class "resume-section" id = "skills"> </div>
+  <div class "resume-section" id = "projects"> </div>
+  <div class "resume-section" id = "experience"> </div>
+
+</body>
+
+</html>

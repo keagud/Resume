@@ -1,10 +1,7 @@
 {
     "basic_info": {
-        "info": {
-            "basic": {
                 "firstname": "Keaton",
-                "lastname": "Guderian"
-            },
+                "lastname": "Guderian",
             "contact": {
                 "email": "keagud@protonmail.com",
                 "phone": "(206)-321-2181"
@@ -13,7 +10,6 @@
                 "github": "https://github.com/keagud",
                 "website": "https://implicit.computer"
             }
-        }
     },
     "education": {
         "degrees": [
