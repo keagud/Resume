@@ -1,16 +1,19 @@
 {
     "basic_info": {
                 "firstname": "Keaton",
-                "lastname": "Guderian",
-            "contact": {
+                "lastname": "Guderian"
+              },
+
+
+      "contact": {
                 "email": "keagud@protonmail.com",
                 "phone": "(206)-321-2181"
             },
             "links": {
                 "github": "https://github.com/keagud",
                 "website": "https://implicit.computer"
-            }
-    },
+            },
+
     "education": {
         "degrees": [
             {
@@ -22,7 +25,7 @@
                     },
                     {
                         "name": "Intro to Computational Linguistics",
-                        "description": "Intro to Computational Linguistics: Survey of natural language processing methods including deterministic, Baysian, and machine learning paradigms, with accompanying practical experience with Python."
+                        "description": "Survey of natural language processing methods including deterministic, Baysian, and machine learning paradigms, with accompanying practical experience with Python."
                     }
                 ]
             },
@@ -32,7 +35,7 @@
         ],
         "overall": {
             "achievements": [
-                "graduated Cum Laude",
+                "Graduated Cum Laude",
                 "Made the Dean's List for every term that met the credit requirement (all but 2)"
             ],
             "gpa": 3.88,
@@ -84,7 +87,7 @@
             ],
             "link": "https://github.com/keagud/quackbot",
             "bullet_points": [
-                " item A Discord bot with a modular design, allowing features and commands to be easily swapped out. Current functionality includes: fortune telling with a simulated Tarot deck, generation of images based on a macro, user search of Wikipedia. ",
+                "A Discord bot with a modular design, allowing features and commands to be easily swapped out. Current functionality includes: fortune telling with a simulated Tarot deck, generation of images based on a macro, user search of Wikipedia. ",
                 "Written in Typescript and Javascript using Node.js and npm. Hosted on Google Cloud, with building and deployment fully automated using a Github Actions CI/CD workflow script"
             ],
             "show": true
@@ -97,7 +100,7 @@
             ],
             "link": "https://github.com/keagud/linelog",
             "bullet_points": [
-                "item A development productivity tool that calculates the number of lines of code commited in Git by a given user, over a given interval of time, and displays the results as a curses-style graph on the command line broken down by language. Definitions for what should count as a \"line\" are fully customizable for each filetype."
+                "A development productivity tool that calculates the number of lines of code commited in Git by a given user, over a given interval of time, and displays the results as a curses-style graph on the command line broken down by language. Definitions for what should count as a \"line\" are fully customizable for each filetype."
             ],
             "show": true
         },
@@ -113,7 +116,7 @@
             "show": false
         }
     ],
-    "experience": {
+    "experience": [ {
         "company_name": "Ikolith Recreations",
         "job_title": "Technical Consultant",
         "year_start": 2020,
@@ -123,7 +126,8 @@
             "Wrote and managed utility scripts, mostly in Python and bash, to automate workflow tasks such as document formatting.",
             "Developed an automated pipeline to convert and compile Markdown documentation into Latex for publication. Created a program to partially simulate the evolution of a fictional language over time as a worldbuilding and writing aid"
         ]
-    },
+    }
+    ],
     "hobbies": [
         " Ancient languages (Latin, Attic Greek)",
         "Ancient languages   (Lisp, C89, Ada) ",
