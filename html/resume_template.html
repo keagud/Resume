@@ -2,6 +2,7 @@
 
 <html lang="en">
   <head>
+    
     <meta charset="UTF-8" />
 
     <title>resume</title>
@@ -11,6 +12,7 @@
     <meta name="description" content="" />
 
     <link rel="icon" href="favicon.png" />
+    <link rel="stylesheet" href="style.css"/>
   </head>
 
   <body>
@@ -24,7 +26,11 @@
 
       <div id="contact">
         <div id="phone">{{ contact.phone }}</div>
-        <div id="email">{{ contact.email }}</div>
+        <div id="email">
+          <a id="email-mailto-link" href="mailto:{{contact.email}}">
+          {{ contact.email }}
+          </a>
+        </div>
       </div>
 
       <div id="links">
@@ -119,6 +125,7 @@
 
           {% endfor %}
         </ul>
+        </div>
 
         <div id="skills-section-other-tech">
           <h3 class="subsection-title">Other Technical Skills</h3>
@@ -133,11 +140,12 @@
             {% endfor %}
           </ul>
         </div>
-      </div>
 
+      </div>
       {#
       <!-- EXPERIENCE -->
-      #} <div class "resume-section" id = "experience">
+      #} 
+      <div class "resume-section" id = "experience">
       <h2 class="section-title">Experience</h2>
 
       {% for item in experience %}
@@ -165,7 +173,7 @@
     {#
     <!-- PROJECTS -->
     #}
-    <div class="resume-section" id="projects"></div>
+    <div class="resume-section" id="projects">
     <h2 class="section-title">Projects</h2>
     <ul>
       {% for project in projects if project.show %}
@@ -196,6 +204,7 @@
 
       {% endfor %}
     </ul>
+    </div>
 
     {#
     <!-- HOBBIES/OTHER -->

@@ -1,0 +1,35 @@
+* {font-family: "Courier";}
+.section-title{
+  text-decoration:underline;
+}
+
+
+div#basic-info {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+
+a:link {
+  color: cornflowerblue;
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: underline;
+  color: red;
+}
+
+
+a:hover{
+  font-weight: bold;
+}
+
+a:active{
+  color: hotpink;
+  text-decoration: none;
+
+}
+
+

@@ -3,6 +3,5 @@ serve:
 
 render:
 	python3 ../render.py
-	prettier resume.html --write
 
 
