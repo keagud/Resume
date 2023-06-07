@@ -1,24 +1,37 @@
-* {font-family: "Courier";}
-.section-title{
-  text-decoration:underline;
+
+body {
+  font-family:"Helvetica";
+  margin-left: 20em;
+  margin-right: 20em;
+background-color: #fffff8;
+      color: #111;
+  max-width:1400px;
+
+
+  font-size: 1.2em;
+
 }
 
 
+ 
+.section-title {
+  text-decoration:underline;
+  font-family:"Courier"
+}
+
+
+
 div#basic-info {
+  font-family:"Courier";
   margin: auto;
   width: 50%;
   text-align: center;
 }
 
 
-a:link {
+a:link, a:visited {
   color: cornflowerblue;
   text-decoration: none;
-}
-
-a:visited {
-  text-decoration: underline;
-  color: red;
 }
 
 
@@ -31,5 +44,75 @@ a:active{
   text-decoration: none;
 
 }
+
+
+#section-nav-bar{
+
+  margin: auto;
+  padding-top: 3em;
+  text-align: center;
+  font-family:"Courier";
+  border-bottom:solid;
+
+}
+
+.section-nav-bar-link{
+  display: inline-block;
+  padding: 0 1em;
+
+  margin-bottom:1.3em;
+}
+
+
+
+.past-job-title{ font-weight:bold; }
+
+
+    color: #111;
+#projects  > ul{
+  list-style:none;
+}
+
+.course-name{
+  font-style:italic;
+  text-decoration:underline;
+
+}
+
+li {
+
+  line-height:1.2rem;
+}
+
+.project-title-header{
+
+  font-family:"Courier";
+
+}
+
+.project-header, .past-job-header, .education-institution-summary{
+ display: flex; 
+  justify-content: space-between;
+  border-bottom: dotted;
+}
+
+.project-item {
+  padding-bottom:3em;
+
+}
+
+.project-keywords, .past-job-timespan, .education-timespan{ 
+  font-style:italic; 
+  margin-right:5em;
+}
+
+.project-title-header, .past-job-title, .education-institution-name{
+
+  margin-left:.5em;
+  font-weight:bold;
+  font-size:1.3em;
+
+}
+
 
 

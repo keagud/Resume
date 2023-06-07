@@ -17,6 +17,7 @@
 
   <body>
     
+    
     <div class="resume-section" id="basic-info">
       <h1 id="full-name">
         Keaton Guderian
@@ -50,17 +51,21 @@
       </div>
     </div>
 
+
+    
+    <nav id="section-nav-bar"> </nav>
+
     
     <div class="resume-section" id="education">
       <h2 class="section-title">Education</h2>
-      <div id="education-institution-summary">
+      <span class="education-institution-summary">
         <span class="education-institution-name">
           University of Washington, Seattle
         </span>
         <span class="education-timespan">
           2016-2020
         </span>
-      </div>
+      </span>
       <ul>
         <li>Overall GPA: 3.88</li>
 
@@ -88,15 +93,15 @@
             
 
             <li class="course-list-item">
-              <h5 class="course-name">Syntax I-II</h5>
-              <p class="course-description">Theory and analysis of both natural and formal language systems</p>
+              <span class="course-name">Syntax I-II: </span>
+              <span class="course-description">Theory and analysis of both natural and formal language systems</span>
             </li>
 
             
 
             <li class="course-list-item">
-              <h5 class="course-name">Intro to Computational Linguistics</h5>
-              <p class="course-description">Survey of natural language processing methods including deterministic, Baysian, and machine learning paradigms, with accompanying practical experience with Python.</p>
+              <span class="course-name">Intro to Computational Linguistics: </span>
+              <span class="course-description">Survey of natural language processing methods including deterministic, Baysian, and machine learning paradigms, with accompanying practical experience with Python.</span>
             </li>
 
             
@@ -238,12 +243,15 @@
 
       
 
-      <div id="experience-item">
+      <div class="experience-item">
+
+        <span class = "past-job-header">
         <span class="past-job-title">
           Technical Consultant, Ikolith Recreations
         </span>
         <span class="past-job-timespan">
           2020-2022
+        </span>
         </span>
         <p class="past-job-description">Technical and creative work with a local Seattle-based independent tabletop game studio.</p>
 
@@ -271,6 +279,7 @@
           <span class="project-title-header">
             <a href="https://github.com/keagud/della"> Della </a>
           </span>
+          
           <span class="project-keywords">
             
             <span class="project-keyword">
@@ -278,6 +287,9 @@
             </span>
 
             
+          
+          </span>
+        </span>
 
             <ul class="project-bullet-points-list">
               
@@ -307,6 +319,7 @@
           <span class="project-title-header">
             <a href="https://github.com/keagud/quackbot"> Quackbot </a>
           </span>
+          
           <span class="project-keywords">
             
             <span class="project-keyword">
@@ -324,6 +337,9 @@
             </span>
 
             
+          
+          </span>
+        </span>
 
             <ul class="project-bullet-points-list">
               
@@ -348,6 +364,7 @@
           <span class="project-title-header">
             <a href="https://github.com/keagud/linelog"> Linelog </a>
           </span>
+          
           <span class="project-keywords">
             
             <span class="project-keyword">
@@ -360,6 +377,9 @@
             </span>
 
             
+          
+          </span>
+        </span>
 
             <ul class="project-bullet-points-list">
               
@@ -378,7 +398,7 @@
     </div>
 
     
-    <div class="resume-section" id="hobbies">
+    <div class="resume-section" id="other-interests">
       <h2 class="section-title">Other Interests</h2>
       <ul>
         
@@ -392,5 +412,31 @@
         
       </ul>
     </div>
+
+
+    <script> 
+
+    window.addEventListener("DOMContentLoaded", function() {
+      const sectionTitles = document.getElementsByClassName("section-title");
+      const navLinks = document.getElementById("section-nav-bar");
+
+      for (let i = 0; i < sectionTitles.length; i++) {
+        const sectionTitle = sectionTitles[i].textContent;
+        const listItem = document.createElement("li");
+        
+        listItem.className = "section-nav-bar-link"
+        
+        const link = document.createElement("a");
+
+        link.textContent = sectionTitle;
+        link.href = "#" + sectionTitle.replace(/\s+/g, "-").toLowerCase();
+
+        listItem.appendChild(link);
+        navLinks.appendChild(listItem);
+      }
+    });
+
+
+    </script>
   </body>
 </html>

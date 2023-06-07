@@ -16,6 +16,7 @@
   </head>
 
   <body>
+    
     {#
     <!-- BASIC INFO -->
     #}
@@ -45,19 +46,23 @@
       </div>
     </div>
 
+
+    
+    <nav id="section-nav-bar"> </nav>
+
     {#
     <!-- EDUCATION -->
     #}
     <div class="resume-section" id="education">
       <h2 class="section-title">Education</h2>
-      <div id="education-institution-summary">
+      <span class="education-institution-summary">
         <span class="education-institution-name">
           {{ education.overall.school }}
         </span>
         <span class="education-timespan">
           {{ education.overall.year_start }}-{{ education.overall.year_end }}
         </span>
-      </div>
+      </span>
       <ul>
         <li>Overall GPA: {{ education.overall.gpa }}</li>
 
@@ -81,8 +86,8 @@
             {% for course in degree.relevent_courses %}
 
             <li class="course-list-item">
-              <h5 class="course-name">{{ course.name }}</h5>
-              <p class="course-description">{{ course.description }}</p>
+              <span class="course-name">{{ course.name }}: </span>
+              <span class="course-description">{{ course.description }}</span>
             </li>
 
             {% endfor %}
@@ -150,12 +155,15 @@
 
       {% for item in experience %}
 
-      <div id="experience-item">
+      <div class="experience-item">
+
+        <span class = "past-job-header">
         <span class="past-job-title">
           {{item.job_title}}, {{ item.company_name}}
         </span>
         <span class="past-job-timespan">
           {{ item.year_start }}-{{ item.year_end }}
+        </span>
         </span>
         <p class="past-job-description">{{ item.general_description }}</p>
 
@@ -182,6 +190,7 @@
           <span class="project-title-header">
             <a href="{{project.link}}"> {{ project.name }} </a>
           </span>
+          
           <span class="project-keywords">
             {% for keyword in project.tech_keywords %}
             <span class="project-keyword">
@@ -189,6 +198,9 @@
             </span>
 
             {% endfor %}
+          
+          </span>
+        </span>
 
             <ul class="project-bullet-points-list">
               {% for point in project.bullet_points %}
@@ -209,7 +221,7 @@
     {#
     <!-- HOBBIES/OTHER -->
     #}
-    <div class="resume-section" id="hobbies">
+    <div class="resume-section" id="other-interests">
       <h2 class="section-title">Other Interests</h2>
       <ul>
         {% for item in hobbies %}
@@ -217,5 +229,31 @@
         {% endfor %}
       </ul>
     </div>
+
+
+    <script> 
+
+    window.addEventListener("DOMContentLoaded", function() {
+      const sectionTitles = document.getElementsByClassName("section-title");
+      const navLinks = document.getElementById("section-nav-bar");
+
+      for (let i = 0; i < sectionTitles.length; i++) {
+        const sectionTitle = sectionTitles[i].textContent;
+        const listItem = document.createElement("li");
+        
+        listItem.className = "section-nav-bar-link"
+        
+        const link = document.createElement("a");
+
+        link.textContent = sectionTitle;
+        link.href = "#" + sectionTitle.replace(/\s+/g, "-").toLowerCase();
+
+        listItem.appendChild(link);
+        navLinks.appendChild(listItem);
+      }
+    });
+
+
+    </script>
   </body>
 </html>

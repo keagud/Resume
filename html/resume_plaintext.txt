@@ -1,0 +1,54 @@
+Keaton Guderian
+(206)-321-2181
+keagud@protonmail.com
+Github:  https://github.com/keagud
+Website: https://keagud.github.io
+
+Education:
+    University of Washington, Seattle 2016-2020
+    Overall GPA: 3.88
+    Graduated Cum Laude
+
+    Bachelor of Arts, Linguistics
+        
+    Bachelor of Science, Speech and Hearing Science
+    
+Skills:
+Programming Languages: Python, Javascript/Typescript, C, C++, HTML/CSS 
+
+Other Technical Skills:
+
+    - Web Frontend: Sass/CSS, React.js, Jekyll
+    - Web Backend: Django, Jinja, SQL (Postgres/Sqlite), nginx, Docker
+    - Ipython/jupyter, numpy, pandas 
+
+    - Linux user for all personal computing needs for the past 7 years, adept in most common command line utilities in the Linux/Unix environment (bash/zsh, sed, grep, ssh, vim...), as well as the Unix filesystem architecture and API
+
+
+Experience:
+
+    Technical Manager, Ikolith Recreations 2020-2022
+            
+    Technical and creative work with a local Seattle-based independent tabletop game studio.
+
+    Wrote and managed utility scripts, mostly in Python and bash, to automate workflow tasks such as document formatting.
+    Developed an automated pipeline to convert and compile Markdown documentation into Latex for publication. Created a program to partially simulate the evolution of a fictional language over time as a worldbuilding and writing aid
+
+
+Selected Projects:
+
+ Della (Python): https://github.com/keagud/della 
+
+  A personal orginizer similar to TaskWarrior, with the added feature of natural language processing to allow todos to be managed with a simple, naturalistic command syntax, e.g. "pick up Dave at the airport a week from this Wednesday."  Written in pure Python; remote syncing is handled over SSH via the Paramiko library
+
+ Quackbot (Javascript, Typescript, Node.js) https://github.com/keagud/quackbot
+
+  A Discord bot with a modular design, allowing features and commands to be easily swapped out. Current functionality includes: fortune telling with a simulated Tarot deck, generation of images based on a macro, user search of Wikipedia. Written in Typescript and Javascript using Node.js and npm. Hosted on Google Cloud, with building and deployment fully automated using a Github Actions CI/CD workflow script
+
+
+ Linelog (Python, Git) https://github.com/keagud/linelog
+ 
+  A development productivity tool that calculates the number of lines of code commited in Git by a given user, over a given interval of time, and displays the results as a curses-style graph on the command line broken down by language. Definitions for what should count as a "line" are fully customizable for each filetype.
+
+References: Available upon request
+
