@@ -1,14 +1,13 @@
 
 body {
   font-family:"Helvetica";
-  margin-left: 20em;
-  margin-right: 20em;
+  margin-left: 20%;
+  margin-right: 20%;
 background-color: #fffff8;
       color: #111;
   max-width:1400px;
 
-
-  font-size: 1.2em;
+  font-size: 20px;
 
 }
 
@@ -26,6 +25,7 @@ div#basic-info {
   margin: auto;
   width: 50%;
   text-align: center;
+  border-bottom:none;
 }
 
 
@@ -45,6 +45,13 @@ a:active{
 
 }
 
+span.course-name{
+
+  font-weight:bold;
+  font-style:italic;
+
+
+}
 
 #section-nav-bar{
 
@@ -68,20 +75,16 @@ a:active{
 .past-job-title{ font-weight:bold; }
 
 
-    color: #111;
+.resume-section{
+
+  border-bottom: solid .1em;
+
+
+}
+
+
 #projects  > ul{
   list-style:none;
-}
-
-.course-name{
-  font-style:italic;
-  text-decoration:underline;
-
-}
-
-li {
-
-  line-height:1.2rem;
 }
 
 .project-title-header{
@@ -103,12 +106,10 @@ li {
 
 .project-keywords, .past-job-timespan, .education-timespan{ 
   font-style:italic; 
-  margin-right:5em;
 }
 
 .project-title-header, .past-job-title, .education-institution-name{
 
-  margin-left:.5em;
   font-weight:bold;
   font-size:1.3em;
 
