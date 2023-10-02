@@ -1,0 +1,148 @@
+<?xml-model href="./schema.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+
+<Resume>
+  <Contact>
+    <FullName>Keaton Guderian</FullName>
+    <Email>keagud@protonmail.com</Email>
+    <Website url="https://implicit.computer" text="My Website" />
+    <Github url="https://github.com/keagud" text="My Github" />
+
+
+  </Contact>
+  <Section title="Education">
+    <SectionEntry>
+      <Detail title="University of Washington, Seattle" side-text="2016-2020">
+        <BulletPoint>
+          Batchelor of Arts, Linguistics
+        </BulletPoint>
+
+        <BulletPoint>
+          Batchelor of Science, Hearing Science
+        </BulletPoint>
+      </Detail>
+    </SectionEntry>
+  </Section>
+
+
+  <Section title="Experience">
+    <SectionEntry title="Ikolith Recreations">
+      <Detail title="Contractor" side-text="2021-2022">
+        <BulletPoint>
+          Contract work doing technical "odd jobs" for a local Seattle-based independent tabletop game studio.
+        </BulletPoint>
+
+        <BulletPoint>
+
+          Wrote and managed utility scripts, mostly in Python and bash, to automate workflow tasks such as document formatting.
+        </BulletPoint>
+
+        <BulletPoint>
+          Developed an automated pipeline to convert and compile Markdown documentation into Latex for publication. 
+        </BulletPoint>
+
+        <BulletPoint>
+        Created a program to partially simulate the evolution of a 
+fictional language over time as a worldbuilding and writing aid
+        </BulletPoint>
+
+      </Detail>
+
+    </SectionEntry>
+
+    <SectionEntry title="BoxWave">
+      <Detail title="Intern" side-text="July-October 2022" />
+      <Detail title="Developer" side-text="October 2022-Present">
+        <BulletPoint>
+          Wrote tools in Python and C# to automatically fetch up-to-date vendor reports via Amazon's seller API, providing an overall efficiency increase of over 100%
+        </BulletPoint>
+        <BulletPoint>
+          Designed, implemented, and tested database schemas representing complex product relationships for use with Postgres
+        </BulletPoint>
+        <BulletPoint>
+
+        </BulletPoint>
+      </Detail>
+
+    </SectionEntry>
+  </Section>
+  <Section title="Skills">
+    <SectionEntry>
+      <Detail title="Programming Languages">
+        <BulletPoint>Python (since 2013) </BulletPoint>
+        <BulletPoint>HTML/CSS, Javascript (since 2016) </BulletPoint>
+        <BulletPoint>Rust, C, Typescript (since 2020) </BulletPoint>
+      </Detail>
+
+      <Detail title="Other Technologies and Frameworks">
+        <BulletPoint>
+            Django, Flask, SQL (Postgres/Sqlite), Docker, Svelte, React 
+        </BulletPoint>
+        <BulletPoint> Linux user for all personal computing needs for the past 7 years, adept in most common command line utilities in the Linux/Unix environment (bash/zsh, sed, grep, ssh, vim...), as well as the Unix filesystem architecture and API
+        </BulletPoint>
+      </Detail>
+
+    </SectionEntry>
+  </Section>
+
+
+  <Section title="Projects">
+    <SectionEntry>
+
+      <Detail title="Personal Website" side-text="Rust, HTML/CSS, Javascript, misc others"
+        link="https://github.com/keagud/personal_site">
+
+        <BulletPoint>
+          My personal website, which contains my blog as well as some interactive experiments in client-side development.
+        </BulletPoint>
+
+        <BulletPoint>
+          The backend, including template rendering, routing, and database integrations, was made in Rust using the Axum library. 
+        </BulletPoint>
+
+        <BulletPoint>
+          There's also some smaller demos where I test out my ideas, including a WYSIWYG Markdown editor that uses Svelte with Rust compiled to WebAssembly for fast, responsive editing.
+        </BulletPoint>
+
+      </Detail>
+
+
+      <Detail title="Linelog" side-text="python" link="https://github.com/keagud/linelog">
+        <BulletPoint>A development productivity tool that calculates the number of lines of code commited in Git by a given user, over a given interval of time, and displays the results as a curses-style graph on the command line broken down by language. Definitions for what should count as a "line" are fully customizable for each filetype.
+        </BulletPoint>
+
+      </Detail>
+
+
+      <Detail title="Quackbot" side-text="Javascript, Typescript, Node.js"
+        link="https://github.com/keagud/quackbot">
+
+        <BulletPoint>
+              A Discord bot with a modular design, allowing features and commands to be easily swapped out. Current functionality includes: fortune telling with a simulated Tarot deck, generation of images based on a macro, user search of Wikipedia. 
+            </BulletPoint>
+
+        <BulletPoint>
+              Written in Typescript and Javascript using Node.js and npm. Hosted on Google Cloud, with building and deployment fully automated using a Github Actions CI/CD workflow script
+            </BulletPoint>
+
+
+      </Detail>
+
+
+    </SectionEntry>
+  </Section>
+
+  <Section title="Other">
+    <SectionEntry>
+      <Detail>
+        <BulletPoint> Ancient languages (Latin, Attic Greek)</BulletPoint>
+        <BulletPoint>Ancient languages   (Lisp, C89, Ada) </BulletPoint>
+        <BulletPoint>Constructed Languages</BulletPoint>
+        <BulletPoint>Distance running, cycling</BulletPoint>
+      </Detail>
+    </SectionEntry>
+
+
+  </Section>
+
+</Resume>

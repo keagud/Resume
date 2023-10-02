@@ -1,0 +1,63 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Resume">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- Contact Information -->
+        <xs:element name="Contact" type="ContactType" />
+
+        <xs:sequence>
+          <xs:element name="Section" type="ResumeSection" maxOccurs="unbounded" />
+        </xs:sequence>
+
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="ResumeSection">
+    <xs:sequence>
+      <xs:element name="SectionEntry" type="ResumeEntry" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="title" type="xs:string" />
+  </xs:complexType>
+
+
+
+
+  <xs:complexType name="EntryDetail">
+      <xs:sequence>
+        <xs:element name="BulletPoint" type="xs:string" maxOccurs="unbounded" minOccurs="0"   />
+    </xs:sequence>
+    <xs:attribute name="title" type="xs:string"/>
+    <xs:attribute name="side-text" type="xs:string" use="optional"/>
+    <xs:attribute name="link" type="xs:anyURI" use="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="ResumeEntry">
+    <xs:sequence>
+      <xs:element name="Detail" type="EntryDetail" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="title" type="xs:string" />
+  </xs:complexType>
+
+
+  <xs:complexType name="SiteLink">
+    <xs:attribute name="url" type="xs:anyURI"  use="required"/>
+    <xs:attribute name="text" type="xs:string" use="optional" />
+  </xs:complexType>
+
+
+
+  <!-- Define ContactType -->
+  <xs:complexType name="ContactType">
+    <xs:sequence>
+      <xs:element name="FullName" type="xs:string" />
+      <xs:element name="Address" type="xs:string" minOccurs="0"/>
+      <xs:element name="Email" type="xs:string" />
+      <xs:element name="Phone" type="xs:string"  minOccurs="0"/>
+      <xs:element name="Website" type="SiteLink" />
+      <xs:element name="Github" type="SiteLink" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
