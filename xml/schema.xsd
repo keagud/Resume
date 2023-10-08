@@ -4,7 +4,11 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element name="Contact" type="ContactType" />
-        <xs:element name="Section" type="SectionType" maxOccurs="unbounded" />
+        <xs:element name="Education" type="EducationType" />
+        <xs:element name="Experience" type="ExperienceType" />
+        <xs:element name="Skills" type="SkillsType" />
+        <xs:element name="Projects" type="ProjectsType" />
+        <xs:element name="Hobbies" type="HobbiesType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -25,16 +29,9 @@
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="SectionType">
+  <xs:complexType name="EducationType">
     <xs:sequence>
-      <xs:element name="SectionTitle" type="xs:string" />
-      <xs:choice maxOccurs="unbounded">
-        <xs:element name="School" type="SchoolType" />
-        <xs:element name="ExperienceLocation" type="ExperienceLocationType" />
-        <xs:element name="SkillGroup" type="SkillGroupType" />
-        <xs:element name="Project" type="ProjectType" />
-        <xs:element name="Hobby" type="xs:string" />
-      </xs:choice>
+      <xs:element name="School" type="SchoolType" />
     </xs:sequence>
   </xs:complexType>
 
@@ -58,6 +55,12 @@
     </xs:sequence>
   </xs:complexType>
 
+  <xs:complexType name="ExperienceType">
+    <xs:sequence>
+      <xs:element name="ExperienceLocation" type="ExperienceLocationType" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
   <xs:complexType name="ExperienceLocationType">
     <xs:sequence>
       <xs:element name="ExperienceLocationName" type="xs:string" />
@@ -72,6 +75,29 @@
       <xs:element name="StartDate" type="DateType" minOccurs="0" />
       <xs:element name="EndDate" type="DateType" minOccurs="0" />
       <xs:element name="RoleDescription" type="xs:string" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SkillsType">
+    <xs:sequence>
+      <xs:element name="ProgrammingLanguages" type="ProgrammingLanguagesType" maxOccurs="unbounded" />
+      <xs:element name="SkillGroup" type="SkillGroupType" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ProgrammingLanguagesType">
+    <xs:sequence>
+      <!-- Define Language as a repeating element -->
+      <xs:element name="Language" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <!-- Since element for the year -->
+            <xs:element name="Since" type="xs:gYear" />
+            <!-- LanguageName element for the name of the language -->
+            <xs:element name="LanguageName" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -90,6 +116,12 @@
     </xs:sequence>
   </xs:complexType>
 
+  <xs:complexType name="ProjectsType">
+    <xs:sequence>
+      <xs:element name="Project" type="ProjectType" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
   <xs:complexType name="ProjectType">
     <xs:sequence>
       <xs:element name="ProjectTitle" type="xs:string" />
@@ -102,6 +134,12 @@
   <xs:complexType name="ProjectDescriptionType">
     <xs:sequence>
       <xs:element name="ProjectBullet" type="xs:string" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="HobbiesType">
+    <xs:sequence>
+      <xs:element name="Hobby" type="xs:string" maxOccurs="unbounded" />
     </xs:sequence>
   </xs:complexType>
 

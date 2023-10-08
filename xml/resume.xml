@@ -1,13 +1,12 @@
-
 <?xml-model href="./schema.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <Resume>
   <Contact>
     <FirstName>Keaton</FirstName>
     <LastName>Guderian</LastName>
-    <Email>keagud@protonmail.com.com</Email>
+    <Email>keagud@protonmail.com</Email>
     <Website>
       <Url>
-        https://www.keagud.com
+        https://implicit.computer
       </Url>
       <Text>
         My Website
@@ -24,8 +23,7 @@
   </Contact>
 
 
-  <Section>
-    <SectionTitle>Education</SectionTitle>
+  <Education>
     <School>
       <Name>University of Washington, Seattle</Name>
       <!-- StartDate and EndDate can be a year, year + month, or year + month + date-->
@@ -41,11 +39,10 @@
         <Field>Speech and Hearing Science</Field>
       </Degree>
     </School>
-  </Section>
+  </Education>
 
 
-  <Section>
-    <SectionTitle>Experience</SectionTitle>
+  <Experience>
     <ExperienceLocation>
       <ExperienceLocationName>Ikolith Recreations</ExperienceLocationName>
       <ExperienceRole>
@@ -79,9 +76,9 @@
     </ExperienceLocation>
 
     <ExperienceLocation>
-      <ExperienceLocationName>Beta LLC</ExperienceLocationName>
+      <ExperienceLocationName>Boxwave</ExperienceLocationName>
       <ExperienceRole>
-        <RoleName>Intern</RoleName>
+        <RoleName>Programming Intern</RoleName>
         <StartDate>2023-07</StartDate>
         <EndDate>2023-10</EndDate>
       </ExperienceRole>
@@ -100,38 +97,36 @@
       </ActionBullet>
     </ExperienceLocation>
 
-  </Section>
+  </Experience>
 
 
-  <Section>
-    <SectionTitle>Skills</SectionTitle>
-    <SkillGroup>
-      <SkillGroupName>Programming Languages</SkillGroupName>
-      <SkillBullet>
+  <Skills>
+    <ProgrammingLanguages>
+      <Language>
         <Since>2013</Since>
-        <SkillName>Python</SkillName>
-      </SkillBullet>
-      <SkillBullet>
+        <LanguageName>Python</LanguageName>
+      </Language>
+      <Language>
         <Since>2016</Since>
-        <SkillName>HTML</SkillName>
-      </SkillBullet>
-      <SkillBullet>
+        <LanguageName>HTML</LanguageName>
+      </Language>
+      <Language>
         <Since>2016</Since>
-        <SkillName>Javascript</SkillName>
-      </SkillBullet>
-      <SkillBullet>
+        <LanguageName>Javascript</LanguageName>
+      </Language>
+      <Language>
         <Since>2020</Since>
-        <SkillName>Rust</SkillName>
-      </SkillBullet>
-      <SkillBullet>
+        <LanguageName>Rust</LanguageName>
+      </Language>
+      <Language>
         <Since>2020</Since>
-        <SkillName>C</SkillName>
-      </SkillBullet>
-      <SkillBullet>
+        <LanguageName>C</LanguageName>
+      </Language>
+      <Language>
         <Since>2020</Since>
-        <SkillName>Typescript</SkillName>
-      </SkillBullet>
-    </SkillGroup>
+        <LanguageName>Typescript</LanguageName>
+      </Language>
+    </ProgrammingLanguages>
 
 
     <SkillGroup>
@@ -160,11 +155,10 @@
         ssh, vim...), as well as the Unix filesystem architecture and API</SkillText>
     </SkillGroup>
 
-  </Section>
+  </Skills>
 
 
-  <Section>
-    <SectionTitle>Projects</SectionTitle>
+  <Projects>
     <Project>
       <ProjectTitle>
         Personal Website
@@ -256,21 +250,21 @@
           Written in Typescript and Javascript using Node.js and npm. Hosted on Google Cloud, with
           building and deployment fully automated using a Github Actions CI/CD workflow script
         </ProjectBullet>
+
       </ProjectDescription>
 
     </Project>
 
-  </Section>
+  </Projects>
 
 
-  <Section>
-    <SectionTitle> Hobbies </SectionTitle>
+  <Hobbies>
 
     <Hobby> Ancient languages (Latin, Attic Greek)</Hobby>
     <Hobby>Ancient languages (Lisp, C89, Ada) </Hobby>
     <Hobby>Constructed Languages</Hobby>
     <Hobby>Distance running, cycling</Hobby>
 
-  </Section>
+  </Hobbies>
 
 </Resume>
