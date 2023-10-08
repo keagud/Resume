@@ -3,61 +3,107 @@
   <xs:element name="Resume">
     <xs:complexType>
       <xs:sequence>
-        <!-- Contact Information -->
         <xs:element name="Contact" type="ContactType" />
-
-        <xs:sequence>
-          <xs:element name="Section" type="ResumeSection" maxOccurs="unbounded" />
-        </xs:sequence>
-
-
+        <xs:element name="Section" type="SectionType" maxOccurs="unbounded" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
-  <xs:complexType name="ResumeSection">
-    <xs:sequence>
-      <xs:element name="SectionEntry" type="ResumeEntry" maxOccurs="unbounded" />
-    </xs:sequence>
-    <xs:attribute name="title" type="xs:string" />
-  </xs:complexType>
-
-
-
-
-  <xs:complexType name="EntryDetail">
-      <xs:sequence>
-        <xs:element name="BulletPoint" type="xs:string" maxOccurs="unbounded" minOccurs="0"   />
-    </xs:sequence>
-    <xs:attribute name="title" type="xs:string"/>
-    <xs:attribute name="side-text" type="xs:string" use="optional"/>
-    <xs:attribute name="link" type="xs:anyURI" use="optional"/>
-  </xs:complexType>
-
-  <xs:complexType name="ResumeEntry">
-    <xs:sequence>
-      <xs:element name="Detail" type="EntryDetail" maxOccurs="unbounded" />
-    </xs:sequence>
-    <xs:attribute name="title" type="xs:string" />
-  </xs:complexType>
-
-
-  <xs:complexType name="SiteLink">
-    <xs:attribute name="url" type="xs:anyURI"  use="required"/>
-    <xs:attribute name="text" type="xs:string" use="optional" />
-  </xs:complexType>
-
-
-
-  <!-- Define ContactType -->
   <xs:complexType name="ContactType">
     <xs:sequence>
-      <xs:element name="FullName" type="xs:string" />
-      <xs:element name="Address" type="xs:string" minOccurs="0"/>
+      <xs:element name="FirstName" type="xs:string" />
+      <xs:element name="LastName" type="xs:string" />
       <xs:element name="Email" type="xs:string" />
-      <xs:element name="Phone" type="xs:string"  minOccurs="0"/>
-      <xs:element name="Website" type="SiteLink" />
-      <xs:element name="Github" type="SiteLink" />
+      <xs:element name="Website" type="WebsiteType" maxOccurs="unbounded" />
     </xs:sequence>
   </xs:complexType>
+
+  <xs:complexType name="WebsiteType">
+    <xs:sequence>
+      <xs:element name="Url" type="xs:anyURI" />
+      <xs:element name="Text" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SectionType">
+    <xs:sequence>
+      <xs:element name="SectionTitle" type="xs:string" />
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="School" type="SchoolType" />
+        <xs:element name="ExperienceLocation" type="ExperienceLocationType" />
+        <xs:element name="SkillGroup" type="SkillGroupType" />
+        <xs:element name="Project" type="ProjectType" />
+        <xs:element name="Hobby" type="xs:string" />
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SchoolType">
+    <xs:sequence>
+      <xs:element name="Name" type="xs:string" />
+      <xs:element name="StartDate" type="DateType" minOccurs="0" />
+      <xs:element name="EndDate" type="DateType" minOccurs="0" />
+      <xs:element name="Degree" type="DegreeType" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="DateType">
+    <xs:union memberTypes="xs:gYear xs:gYearMonth xs:date" />
+  </xs:simpleType>
+
+  <xs:complexType name="DegreeType">
+    <xs:sequence>
+      <xs:element name="DegreeType" type="xs:string" />
+      <xs:element name="Field" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ExperienceLocationType">
+    <xs:sequence>
+      <xs:element name="ExperienceLocationName" type="xs:string" />
+      <xs:element name="ExperienceRole" type="ExperienceRoleType" />
+      <xs:element name="ActionBullet" type="xs:string" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ExperienceRoleType">
+    <xs:sequence>
+      <xs:element name="RoleName" type="xs:string" />
+      <xs:element name="StartDate" type="DateType" minOccurs="0" />
+      <xs:element name="EndDate" type="DateType" minOccurs="0" />
+      <xs:element name="RoleDescription" type="xs:string" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SkillGroupType">
+    <xs:sequence>
+      <xs:element name="SkillGroupName" type="xs:string" />
+      <xs:element name="SkillBullet" type="SkillBulletType" maxOccurs="unbounded" />
+      <xs:element name="SkillText" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SkillBulletType">
+    <xs:sequence>
+      <xs:element name="Since" type="DateType" minOccurs="0" />
+      <xs:element name="SkillName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ProjectType">
+    <xs:sequence>
+      <xs:element name="ProjectTitle" type="xs:string" />
+      <xs:element name="ProjectTech" type="xs:string" maxOccurs="unbounded" />
+      <xs:element name="ProjectLink" type="xs:anyURI" />
+      <xs:element name="ProjectDescription" type="ProjectDescriptionType" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ProjectDescriptionType">
+    <xs:sequence>
+      <xs:element name="ProjectBullet" type="xs:string" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
 </xs:schema>
+

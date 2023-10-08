@@ -1,147 +1,275 @@
+
 <?xml-model href="./schema.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
-
-
 <Resume>
   <Contact>
-    <FullName>Keaton Guderian</FullName>
-    <Email>keagud@protonmail.com</Email>
-    <Website url="https://implicit.computer" text="My Website" />
-    <Github url="https://github.com/keagud" text="My Github" />
-
-
+    <FirstName>Keaton</FirstName>
+    <LastName>Guderian</LastName>
+    <Email>keagud@protonmail.com.com</Email>
+    <Website>
+      <Url>
+        https://www.keagud.com
+      </Url>
+      <Text>
+        My Website
+      </Text>
+    </Website>
+    <Website>
+      <Url>
+        https://github.com/keagud
+      </Url>
+      <Text>
+        My Github
+      </Text>
+    </Website>
   </Contact>
-  <Section title="Education">
-    <SectionEntry>
-      <Detail title="University of Washington, Seattle" side-text="2016-2020">
-        <BulletPoint>
-          Batchelor of Arts, Linguistics
-        </BulletPoint>
 
-        <BulletPoint>
-          Batchelor of Science, Hearing Science
-        </BulletPoint>
-      </Detail>
-    </SectionEntry>
+
+  <Section>
+    <SectionTitle>Education</SectionTitle>
+    <School>
+      <Name>University of Washington, Seattle</Name>
+      <!-- StartDate and EndDate can be a year, year + month, or year + month + date-->
+      <StartDate>2016</StartDate>
+      <EndDate>2020</EndDate>
+
+      <Degree>
+        <DegreeType>Batchelor of Arts</DegreeType>
+        <Field>Linguistics</Field>
+      </Degree>
+      <Degree>
+        <DegreeType>Batchelor of Science</DegreeType>
+        <Field>Speech and Hearing Science</Field>
+      </Degree>
+    </School>
   </Section>
 
 
-  <Section title="Experience">
-    <SectionEntry title="Ikolith Recreations">
-      <Detail title="Contractor" side-text="2021-2022">
-        <BulletPoint>
-          Contract work doing technical "odd jobs" for a local Seattle-based independent tabletop game studio.
-        </BulletPoint>
+  <Section>
+    <SectionTitle>Experience</SectionTitle>
+    <ExperienceLocation>
+      <ExperienceLocationName>Ikolith Recreations</ExperienceLocationName>
+      <ExperienceRole>
+        <RoleName>Contractor</RoleName>
+        <StartDate>2021</StartDate>
+        <EndDate>2022</EndDate>
 
-        <BulletPoint>
+        <!-- optional -->
+        <RoleDescription>
+          Contract work doing technical "odd jobs" for a local Seattle-based independent tabletop
+          game studio.
+        </RoleDescription>
 
-          Wrote and managed utility scripts, mostly in Python and bash, to automate workflow tasks such as document formatting.
-        </BulletPoint>
+      </ExperienceRole>
 
-        <BulletPoint>
-          Developed an automated pipeline to convert and compile Markdown documentation into Latex for publication. 
-        </BulletPoint>
 
-        <BulletPoint>
-        Created a program to partially simulate the evolution of a 
-fictional language over time as a worldbuilding and writing aid
-        </BulletPoint>
+      <ActionBullet>
+        Wrote and managed utility scripts, mostly in Python and bash, to automate workflow tasks
+        such as document formatting.
+      </ActionBullet>
 
-      </Detail>
+      <ActionBullet>
+        Developed an automated pipeline to convert and compile Markdown documentation into Latex
+        for publication.
+      </ActionBullet>
 
-    </SectionEntry>
+      <ActionBullet>
+        Created a program to partially simulate the evolution of a
+        fictional language over time as a worldbuilding and writing aid
+      </ActionBullet>
+    </ExperienceLocation>
 
-    <SectionEntry title="BoxWave">
-      <Detail title="Intern" side-text="July-October 2022" />
-      <Detail title="Developer" side-text="October 2022-Present">
-        <BulletPoint>
-          Wrote tools in Python and C# to automatically fetch up-to-date vendor reports via Amazon's seller API, providing an overall efficiency increase of over 100%
-        </BulletPoint>
-        <BulletPoint>
-          Designed, implemented, and tested database schemas representing complex product relationships for use with Postgres
-        </BulletPoint>
-        <BulletPoint>
+    <ExperienceLocation>
+      <ExperienceLocationName>Beta LLC</ExperienceLocationName>
+      <ExperienceRole>
+        <RoleName>Intern</RoleName>
+        <StartDate>2023-07</StartDate>
+        <EndDate>2023-10</EndDate>
+      </ExperienceRole>
+      <ActionBullet>
+        Wrote tools in Python and C# to automatically fetch up-to-date vendor reports via Amazon's
+        seller API, providing an overall efficiency increase of over 100%
+      </ActionBullet>
+      <ActionBullet>
+        Designed, implemented, and tested database schemas representing complex product
+        relationships for use with Postgres
+      </ActionBullet>
 
-        </BulletPoint>
-      </Detail>
+      <ActionBullet>
+        Trained and deployed a Recurrent Neural Network using Tensorflow to automate various
+        orginization tasks involving optical character recognition
+      </ActionBullet>
+    </ExperienceLocation>
 
-    </SectionEntry>
-  </Section>
-  <Section title="Skills">
-    <SectionEntry>
-      <Detail title="Programming Languages">
-        <BulletPoint>Python (since 2013) </BulletPoint>
-        <BulletPoint>HTML/CSS, Javascript (since 2016) </BulletPoint>
-        <BulletPoint>Rust, C, Typescript (since 2020) </BulletPoint>
-      </Detail>
-
-      <Detail title="Other Technologies and Frameworks">
-        <BulletPoint>
-            Django, Flask, SQL (Postgres/Sqlite), Docker, Svelte, React 
-        </BulletPoint>
-        <BulletPoint> Linux user for all personal computing needs for the past 7 years, adept in most common command line utilities in the Linux/Unix environment (bash/zsh, sed, grep, ssh, vim...), as well as the Unix filesystem architecture and API
-        </BulletPoint>
-      </Detail>
-
-    </SectionEntry>
   </Section>
 
 
-  <Section title="Projects">
-    <SectionEntry>
-
-      <Detail title="Personal Website" side-text="Rust, HTML/CSS, Javascript, misc others"
-        link="https://github.com/keagud/personal_site">
-
-        <BulletPoint>
-          My personal website, which contains my blog as well as some interactive experiments in client-side development.
-        </BulletPoint>
-
-        <BulletPoint>
-          The backend, including template rendering, routing, and database integrations, was made in Rust using the Axum library. 
-        </BulletPoint>
-
-        <BulletPoint>
-          There's also some smaller demos where I test out my ideas, including a WYSIWYG Markdown editor that uses Svelte with Rust compiled to WebAssembly for fast, responsive editing.
-        </BulletPoint>
-
-      </Detail>
-
-
-      <Detail title="Linelog" side-text="python" link="https://github.com/keagud/linelog">
-        <BulletPoint>A development productivity tool that calculates the number of lines of code commited in Git by a given user, over a given interval of time, and displays the results as a curses-style graph on the command line broken down by language. Definitions for what should count as a "line" are fully customizable for each filetype.
-        </BulletPoint>
-
-      </Detail>
-
-
-      <Detail title="Quackbot" side-text="Javascript, Typescript, Node.js"
-        link="https://github.com/keagud/quackbot">
-
-        <BulletPoint>
-              A Discord bot with a modular design, allowing features and commands to be easily swapped out. Current functionality includes: fortune telling with a simulated Tarot deck, generation of images based on a macro, user search of Wikipedia. 
-            </BulletPoint>
-
-        <BulletPoint>
-              Written in Typescript and Javascript using Node.js and npm. Hosted on Google Cloud, with building and deployment fully automated using a Github Actions CI/CD workflow script
-            </BulletPoint>
+  <Section>
+    <SectionTitle>Skills</SectionTitle>
+    <SkillGroup>
+      <SkillGroupName>Programming Languages</SkillGroupName>
+      <SkillBullet>
+        <Since>2013</Since>
+        <SkillName>Python</SkillName>
+      </SkillBullet>
+      <SkillBullet>
+        <Since>2016</Since>
+        <SkillName>HTML</SkillName>
+      </SkillBullet>
+      <SkillBullet>
+        <Since>2016</Since>
+        <SkillName>Javascript</SkillName>
+      </SkillBullet>
+      <SkillBullet>
+        <Since>2020</Since>
+        <SkillName>Rust</SkillName>
+      </SkillBullet>
+      <SkillBullet>
+        <Since>2020</Since>
+        <SkillName>C</SkillName>
+      </SkillBullet>
+      <SkillBullet>
+        <Since>2020</Since>
+        <SkillName>Typescript</SkillName>
+      </SkillBullet>
+    </SkillGroup>
 
 
-      </Detail>
+    <SkillGroup>
+      <SkillGroupName>Technologies and Frameworks</SkillGroupName>
+      <SkillBullet>
+        <SkillName>Django</SkillName>
+      </SkillBullet>
+      <SkillBullet>
+        <SkillName>Flask</SkillName>
+      </SkillBullet>
+      <SkillBullet>
+        <SkillName>SQL</SkillName>
+      </SkillBullet>
+      <SkillBullet>
+        <SkillName>Docker</SkillName>
+      </SkillBullet>
+      <SkillBullet>
+        <SkillName>Svelte</SkillName>
+      </SkillBullet>
+      <SkillBullet>
+        <SkillName>React</SkillName>
+      </SkillBullet>
 
+      <SkillText> Linux user for all personal computing needs for the past 7 years, adept in most
+        common command line utilities in the Linux/Unix environment (bash/zsh, sed, grep,
+        ssh, vim...), as well as the Unix filesystem architecture and API</SkillText>
+    </SkillGroup>
 
-    </SectionEntry>
   </Section>
 
-  <Section title="Other">
-    <SectionEntry>
-      <Detail>
-        <BulletPoint> Ancient languages (Latin, Attic Greek)</BulletPoint>
-        <BulletPoint>Ancient languages   (Lisp, C89, Ada) </BulletPoint>
-        <BulletPoint>Constructed Languages</BulletPoint>
-        <BulletPoint>Distance running, cycling</BulletPoint>
-      </Detail>
-    </SectionEntry>
 
+  <Section>
+    <SectionTitle>Projects</SectionTitle>
+    <Project>
+      <ProjectTitle>
+        Personal Website
+      </ProjectTitle>
+      <ProjectTech>
+        Rust
+      </ProjectTech>
+      <ProjectTech>
+        HTML/CSS
+      </ProjectTech>
+      <ProjectTech>
+        Javascript
+      </ProjectTech>
+
+      <ProjectLink>https://implicit.computer</ProjectLink>
+
+      <ProjectDescription>
+        <ProjectBullet>
+          My personal website, which contains my blog as well as some interactive experiments in
+          client-side development.
+        </ProjectBullet>
+
+        <ProjectBullet>
+          The backend, including template rendering, routing, and database integrations, was made in
+          Rust using the Axum library.
+        </ProjectBullet>
+
+        <!--
+        <ProjectBullet>
+
+          There's also some smaller demos where I test out my ideas, including a WYSIWYG Markdown
+          editor that uses Svelte with Rust compiled to WebAssembly for fast, responsive editing.
+        </ProjectBullet>
+
+        -->
+      </ProjectDescription>
+
+    </Project>
+
+    <Project>
+      <ProjectTitle>Linelog</ProjectTitle>
+      <ProjectTech>
+        Python
+      </ProjectTech>
+
+      <ProjectLink>https://github.com/keagud/linelog</ProjectLink>
+
+      <ProjectDescription>
+
+
+        <ProjectBullet>A development productivity tool that calculates the number of lines of code
+          commited in Git by a given user, over a given interval of time, and displays the results
+          as a curses-style graph on the command line broken down by language. Definitions for what
+          should count as a "line" are fully customizable for each filetype.
+        </ProjectBullet>
+
+      </ProjectDescription>
+
+    </Project>
+
+
+    <Project>
+      <ProjectTitle>Quackbot</ProjectTitle>
+      <ProjectTech>
+        Javascript
+      </ProjectTech>
+
+      <ProjectTech>
+        Typescript
+      </ProjectTech>
+
+      <ProjectTech>
+        NodeJS
+      </ProjectTech>
+
+
+      <ProjectLink>https://github.com/keagud/quackbot</ProjectLink>
+
+      <ProjectDescription>
+
+
+        <ProjectBullet>
+          A Discord bot with a modular design, allowing features and commands to be easily swapped
+          out. Current functionality includes: fortune telling with a simulated Tarot deck,
+          generation of images based on a macro, user search of Wikipedia.
+        </ProjectBullet>
+
+        <ProjectBullet>
+          Written in Typescript and Javascript using Node.js and npm. Hosted on Google Cloud, with
+          building and deployment fully automated using a Github Actions CI/CD workflow script
+        </ProjectBullet>
+      </ProjectDescription>
+
+    </Project>
+
+  </Section>
+
+
+  <Section>
+    <SectionTitle> Hobbies </SectionTitle>
+
+    <Hobby> Ancient languages (Latin, Attic Greek)</Hobby>
+    <Hobby>Ancient languages (Lisp, C89, Ada) </Hobby>
+    <Hobby>Constructed Languages</Hobby>
+    <Hobby>Distance running, cycling</Hobby>
 
   </Section>
 
