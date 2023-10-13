@@ -13,8 +13,8 @@ from typing import TypeVar
 from xmlschema import XMLSchema
 from jinja2 import Environment, FileSystemLoader
 
-DATA_DIR = Path(__file__).parent.joinpath("data")
-TEMPLATES_DIR = Path(__file__).parent.joinpath("templates")
+DATA_DIR = Path(__file__).parent
+TEMPLATES_DIR = Path(__file__).parent
 
 schema_path = DATA_DIR.joinpath("schema.xsd")
 resume_path = DATA_DIR.joinpath("resume.xml")

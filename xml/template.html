@@ -82,7 +82,7 @@
       <ul>
         {% for since, langs in languages|groupby("since") %}
         <li> <span class="lang-duration">
-            For {{ (today() - since).days // 365 }} years: </span>
+            For {{ (today() - since).days // 365 }} years: </span>yy
           <span class="lang-name"> {{ langs|map(attribute="language_name")|list|join(", ") }} </span>
         </li>
         {% endfor %}

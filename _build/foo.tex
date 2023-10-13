@@ -1,0 +1,388 @@
+
+
+\documentclass[11pt]{article}
+
+
+% ================ PACKAGES ====================
+
+\usepackage[reset, a4paper, margin=6mm, top=7mm, right=4mm]{geometry}
+% text alignment
+\usepackage{ragged2e}
+% loremipsum
+\usepackage{lipsum}
+% text color
+\usepackage{color}
+\usepackage{xcolor}
+% underline
+\usepackage{ulem}
+\usepackage{contour} 
+% multiple columns
+\usepackage{paracol}
+% custom fonts
+\usepackage{fontspec}
+% paper bg
+\usepackage{eso-pic}
+% icons
+\usepackage{fontawesome5}
+% hyperlinks
+\usepackage{hyperref}
+% better itemize
+\usepackage{enumitem}
+
+\usepackage[abspath]{currfile}
+
+% ================ SETTINGS ====================
+
+\setlist[itemize]{noitemsep, topsep=-2pt, leftmargin=2ex}
+
+\setmainfont{IBMPlexSerif} [
+  Extension = .otf , 
+  Path = fonts/ ,
+  UprightFont = *-Regular ,
+  ItalicFont = *-Italic , 
+  BoldFont = *-Bold ,
+  BoldItalicFont = *-BoldItalic ]
+
+
+
+
+\setsansfont{IBMPlexSans} [
+  Extension = .otf , 
+  Path = fonts/ ,
+  UprightFont = *-Regular ,
+  ItalicFont = *-Italic , 
+  BoldFont = *-Bold ,
+  BoldItalicFont = *-BoldItalic ]
+
+
+\renewcommand{\familydefault}{\rmdefault}
+
+% no page numbers and the sorts
+\thispagestyle{empty}
+% no indentation at beginning of paragraph
+\parindent=0pt
+% for underline
+\renewcommand{\ULdepth}{3pt}
+\renewcommand{\ULthickness}{0.5pt}
+\contourlength{2.0pt}
+
+% for links
+\hypersetup{
+  urlbordercolor=gray,
+ pdfborderstyle={/S/U/W 1}
+}
+
+% no hyphenation
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+% ================ MACROS ======================
+
+\newfontfamily\titlethin[Path=fonts/]{IBMPlexSerif-Regular}
+\newfontfamily\titlethick[Path=fonts/]{IBMPlexSerif-SemiBold}
+\newfontfamily\titlebold[Path=fonts/]{IBMPlexSerif-Bold}
+
+\newfontfamily\normaltext[Path=fonts/]{IBMPlexSerif-Regular}
+
+\newcommand{\resumetitle}[3]{
+    \AddToShipoutPictureBG{
+        \AtPageUpperLeft {
+        \raisebox{-0.09\paperheight}{
+            \color{black!85}\rule{2\paperwidth}{\paperheight}}
+        }}
+    \begin{Center}
+        \begingroup
+        \titlethin
+        \color{black!10}\Huge{#1}
+        \titlethick
+        \color{black!5}\Huge{#2} \\
+        \vspace{2mm}
+        \textrm{\color{black!15}\Large{#3}}
+        \endgroup
+    \end{Center}
+    \vspace{7mm}
+}
+
+\newcommand{\betteruline}[1]{
+    \uline{#1}
+}
+
+\newcommand{\sectiontitle}[1]{
+    \begingroup
+        \titlebold
+        \betteruline{\Large\uppercase{#1}  }
+        \vspace{1.7mm}
+    \endgroup
+}
+
+\newcommand{\sectioncontent}[1]{
+    \begingroup
+        \begin{FlushLeft}
+        \vspace{-3mm}
+        \sffamily\small#1
+        \end{FlushLeft}
+    \endgroup
+    \vspace{2mm}
+}
+
+\newcommand{\job}[3]{
+    \begingroup
+        \textbf{\small#1} - \small#2
+        \hfill\color{black!70}\small{#3}
+    \endgroup
+}
+
+\newcommand{\project}[2]{
+    \begingroup
+        \textbf{\small#1}
+        \hfill\color{black!70}\small{#2}
+    \endgroup
+}
+
+\newcommand{\spacevv}{
+    \vspace{2mm}
+}
+
+\newcommand{\honor}[2]{
+    \textcolor{black!70}{#1} - #2 \\
+    \vspace{1.5mm}
+}
+
+\begin{document}
+    \resumetitle{Keaton}{Guderian} {
+      keagud@protonmail.com | (206)-321-2181
+    }
+
+    \columnratio{0.35}
+    \setlength{\columnsep}{7mm}
+    \begin{paracol}{2}
+
+    \sectiontitle{links}
+    \sectioncontent{
+        \faIcon{github-alt}\hspace{2mm}
+        \href{{{https://github.com/keagud}}}{github.com/keagud} \\
+      %  \faIcon{linkedin-in}\hspace{2.1mm}
+      %  \href{example.com}{linkedin} \\
+        \faIcon{link}\hspace{1.8mm}
+        \href{keagud.github.io}{keagud.github.io}
+    }
+
+    \sectiontitle{education}
+    \sectioncontent{
+        \begingroup
+      \textbf{University of Washington, Seattle }\hfill\color{black!70}\small{2016-2020}
+        \endgroup
+      \begin{itemize}
+      \item Overall GPA: 3.88, graduated \textit{Cum Laude}
+      \item Phi Beta Kappa member since 2018
+        \end{itemize}
+      \item \textbf{Bachelor of Arts, Linguistics }
+        \item \textbf{Bachelor of Science, Speech \& Hearing Science}
+      } 
+
+    \sectiontitle{Hobbies \& Interests}
+    \sectioncontent{
+      \begin{itemize}
+        \item Ancient languages \\ (Latin, Attic Greek)
+        \item Ancient languages \\  (Lisp, C89, Ada)
+        \item \href{https://en.wikipedia.org/wiki/Constructed\_language}{Conlanging}
+        \item Distance running, cycling
+
+      \end{itemize}
+    }
+
+    \switchcolumn
+    
+      
+
+    \sectiontitle{Technical Skills}
+    \sectioncontent{
+      
+      
+      \begin{itemize}
+        \item \textbf{Programming Languages: }
+          \begin{itemize}
+          
+          \item For 10 years:  Python
+          
+          \item For 7 years:  HTML, Javascript
+          
+          \item For 3 years:  Rust, C, Typescript
+          
+          \end{itemize}
+
+
+        
+        
+
+        \item \textbf { Technologies and Frameworks }
+        
+          \begin{itemize}
+            \item Django, Flask, SQL, Docker, Svelte, React
+          
+            \smallskip
+          
+          \item Linux user for all personal computing needs for the past 7 years, adept in most common command line utilities in the Linux/Unix environment (bash/zsh, sed, grep, ssh, vim...), as well as the Unix filesystem architecture and API
+          
+          
+          \end{itemize}
+        
+        
+
+      \end{itemize}
+
+
+    }
+
+        \sectiontitle{Experience} 
+        \sectioncontent{
+
+    
+    
+
+        
+        
+        
+
+        
+          
+        
+
+
+        \begingroup
+      \textbf{ Ikolith Recreations }\hfill\color{black!70}\small{ 2021 - 2022 }
+        \endgroup
+        \textit{ Contractor }
+
+        
+      \begin{itemize}
+
+        
+        \item Contract work doing technical "odd jobs" for a local Seattle-based independent tabletop game studio.
+            
+            
+              
+                  \item Wrote and managed utility scripts, mostly in Python and bash, to automate workflow tasks such as document formatting.
+                
+                  \item Developed an automated pipeline to convert and compile Markdown documentation into Latex for publication.
+                
+                  \item Created a program to partially simulate the evolution of a fictional language over time as a worldbuilding and writing aid
+                
+            
+      \end{itemize}
+      
+        
+    
+
+        
+        
+        
+
+        
+          
+        
+
+
+        \begingroup
+      \textbf{ Boxwave }\hfill\color{black!70}\small{ July 2023 - October 2023 }
+        \endgroup
+        \textit{ Programming Intern }
+
+        
+      \begin{itemize}
+
+        
+            
+              
+                  \item Wrote tools in Python and C Sharp to automatically fetch up-to-date vendor reports via Amazon's seller API, providing an overall efficiency increase of over 100%
+                
+                  \item Designed, implemented, and tested database schemas representing complex product relationships for use with Postgres
+                
+                  \item Trained and deployed a Recurrent Neural Network using Tensorflow to automate various orginization tasks involving optical character recognition
+                
+            
+      \end{itemize}
+      
+        
+        }
+
+
+
+
+        
+    \sectiontitle{projects}
+    \sectioncontent{
+      %%%%%%%%%%%%%%%%%%%%%%%%%
+
+    
+      
+        
+          \project{ \href{https://implicit.computer}{Personal Website} }{ Rust,HTML/CSS,Javascript  }
+        \begin{itemize}
+
+            
+              
+
+              \item My personal website, which contains my blog as well as some interactive experiments in client-side development.
+
+                
+
+              \item The backend, including template rendering, routing, and database integrations, was made in Rust using the Axum library.
+
+                
+            
+
+        \end{itemize}
+
+        
+        \spacevv
+        
+
+    
+        
+          \project{ \href{https://github.com/keagud/linelog}{Linelog} }{ Python  }
+        \begin{itemize}
+
+            
+              
+
+              \item A development productivity tool that calculates the number of lines of code commited in Git by a given user, over a given interval of time, and displays the results as a curses-style graph on the command line broken down by language. Definitions for what should count as a "line" are fully customizable for each filetype.
+
+                
+            
+
+        \end{itemize}
+
+        
+        \spacevv
+        
+
+    
+        
+          \project{ \href{https://github.com/keagud/quackbot}{Quackbot} }{ Javascript,Typescript,NodeJS  }
+        \begin{itemize}
+
+            
+              
+
+              \item A Discord bot with a modular design, allowing features and commands to be easily swapped out. Current functionality includes: fortune telling with a simulated Tarot deck, generation of images based on a macro, user search of Wikipedia.
+
+                
+
+              \item Written in Typescript and Javascript using Node.js and npm. Hosted on Google Cloud, with building and deployment fully automated using a Github Actions CI/CD workflow script
+
+                
+            
+
+        \end{itemize}
+
+        
+
+    
+        %%%%%%%%%%%%%%%%%%%%%%%
+}
+    \end{paracol}
+
+\end{document}
