@@ -150,6 +150,10 @@
     \vspace{1.5mm}
 }
 
+
+% Things that aren't going to change soon (like my name)
+% are hardcoded. LaTeX really does not play well with jinja, so
+% I'm calling this a necessary compromise
 \begin{document}
     \resumetitle{Keaton}{Guderian} {
       keagud@protonmail.com | (206)-321-2181
@@ -163,11 +167,12 @@
     \sectioncontent{
         \faIcon{github-alt}\hspace{2mm}
         \href{{{https://github.com/keagud}}}{github.com/keagud} \\
-      %  \faIcon{linkedin-in}\hspace{2.1mm}
-      %  \href{example.com}{linkedin} \\
+        \faIcon{linkedin-in}\hspace{2.1mm}
+        \href{https://www.linkedin.com/in/keaton-guderian-37b716269/}{linkedin (not actively monitored) } \\
         \faIcon{link}\hspace{1.8mm}
         \href{keagud.github.io}{keagud.github.io}
     }
+
 
     \sectiontitle{education}
     \sectioncontent{
@@ -176,7 +181,6 @@
         \endgroup
       \begin{itemize}
       \item Overall GPA: 3.88, graduated \textit{Cum Laude}
-      \item Phi Beta Kappa member since 2018
         \end{itemize}
       \item \textbf{Bachelor of Arts, Linguistics }
         \item \textbf{Bachelor of Science, Speech \& Hearing Science}
@@ -240,6 +244,7 @@
 
         {% set start = exp_role.start_date %}
         {% set end = exp_role.end_date %}
+
         {#
         %% Display the month only if the duration is less than a year-
         #}
@@ -269,6 +274,11 @@
             {% endif %}
       \end{itemize}
       {% endif %}
+
+        {% if not loop.last %}
+          \smallskip
+        {% endif %}
+
         {% endfor %}
         }
 
@@ -300,6 +310,10 @@
         \spacevv
         {% endif %}
 
+
+        {% if not loop.last %}
+          \smallskip
+        {% endif %}
     {% endfor %}
         %%%%%%%%%%%%%%%%%%%%%%%
 }

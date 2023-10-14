@@ -6,6 +6,7 @@ body {
 background-color: #fffff8;
       color: #111;
   max-width:1400px;
+  line-height: 1.3em;
 
   font-size: 20px;
 
@@ -45,14 +46,6 @@ a:active{
 
 }
 
-span.course-name{
-
-  font-weight:bold;
-  font-style:italic;
-
-
-}
-
 #section-nav-bar{
 
   margin: auto;
@@ -71,8 +64,12 @@ span.course-name{
 }
 
 
+.past-job-company {
+  text-decoration: underline;
 
-.past-job-title{ font-weight:bold; }
+}
+
+.past-job-title{ font-style:  italic; }
 
 
 .resume-section{
@@ -104,16 +101,18 @@ span.course-name{
 
 }
 
-.project-keywords, .past-job-timespan, .education-timespan{ 
+.project-keywords, .past-job-timespan, .education-timespan,  .programming-language-item, .lang-name, .education-degree-field { 
   font-style:italic; 
 }
 
-.project-title-header, .past-job-title, .education-institution-name{
-
+.project-title-header,  .education-institution-name{
   font-weight:bold;
   font-size:1.3em;
 
 }
 
 
+.education-degree-type {
+  font-weight: bold;
+}
 

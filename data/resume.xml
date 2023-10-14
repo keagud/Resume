@@ -83,8 +83,8 @@
         <EndDate>2023-10</EndDate>
       </ExperienceRole>
       <ActionBullet>
-        Wrote tools in Python and C Sharp to automatically fetch up-to-date vendor reports via Amazon's
-        seller API, providing an overall efficiency increase of over 100%
+        Wrote internal tools in Python and C Sharp to automatically fetch up-to-date vendor reports via Amazon's
+        seller API, reducing the time required for daily administrative tasks by an order of magnetude. 
       </ActionBullet>
       <ActionBullet>
         Designed, implemented, and tested database schemas representing complex product
@@ -159,6 +159,8 @@
 
 
   <Projects>
+
+    <!--
     <Project>
       <ProjectTitle>
         Personal Website
@@ -186,16 +188,37 @@
           Rust using the Axum library.
         </ProjectBullet>
 
-        <!--
         <ProjectBullet>
 
           There's also some smaller demos where I test out my ideas, including a WYSIWYG Markdown
           editor that uses Svelte with Rust compiled to WebAssembly for fast, responsive editing.
         </ProjectBullet>
 
-        -->
       </ProjectDescription>
+    </Project>
 
+    -->
+    <Project>
+
+      <ProjectTitle>Resume</ProjectTitle>
+      <ProjectTech>Python</ProjectTech>
+      <ProjectTech>TeX</ProjectTech>
+      <ProjectTech>HTML/CSS</ProjectTech>
+      <ProjectTech>Shell</ProjectTech>
+      <ProjectLink>https://github.com/keagud/resume </ProjectLink>
+      <ProjectDescription>
+
+        <ProjectBullet>
+          A series of scripts to validate, populate, and render a resume based on an XML document.
+          Yes, this document you are currently reading is also a programming project.
+        </ProjectBullet>
+
+        <ProjectBullet>
+          HTML and TeX versions are generated simultaneously using the Jinja2 template language, to
+          ensure the Web and PDF versions remain in sync.
+        </ProjectBullet>
+
+      </ProjectDescription>
     </Project>
 
     <Project>

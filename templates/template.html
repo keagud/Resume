@@ -13,6 +13,13 @@
   <meta name="description" content="" />
 
   <link rel="icon" href="favicon.png" />
+
+  {% if style is defined %}
+  <style>
+    {{ style|safe }}
+  </style>
+  {% endif %}
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -25,7 +32,6 @@
     </h1>
 
     <div id="contact">
-      {# <!--    <div id="phone">{{ contact.phone }}</div>  -->#}
       <div id="email">
         <a id="email-mailto-link" href="mailto:{{contact.email}}">
           {{ contact.email }}
@@ -63,8 +69,12 @@
     <ul>
       {% for degree in education.school.degree %}
       <li class="education-degree-desc">
-        {{ degree.degree_type }}, {{ degree.field }}
+          <span class="education-degree-type">{{ degree.degree_type }},</span> <span class="education-degree-field">{{ degree.field }}</span>
       </li>
+
+      {% if not loop.last %}
+      <br />
+      {% endif %}
       {% endfor %}
     </ul>
   </div>
@@ -82,7 +92,7 @@
       <ul>
         {% for since, langs in languages|groupby("since") %}
         <li> <span class="lang-duration">
-            For {{ (today() - since).days // 365 }} years: </span>yy
+            For {{ (today() - since).days // 365 }} years: </span>
           <span class="lang-name"> {{ langs|map(attribute="language_name")|list|join(", ") }} </span>
         </li>
         {% endfor %}
@@ -265,6 +275,5 @@
   </script>
 </body>
 
-</body>
 
 </html>
