@@ -248,7 +248,8 @@ def cli():
         tex_file = render_template("tex", input_xml=args.xml)
         output_file = build_latex(tex_file)
 
-    print(f"Successfully generated {output_file.as_posix()}")
+    print(str(output_file))
+    return output_file
 
 
 if __name__ == "__main__":
