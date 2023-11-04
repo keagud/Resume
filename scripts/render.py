@@ -252,5 +252,16 @@ def cli():
     return output_file
 
 
+def build_resume(template_type: str, input_xml: Path | None = None) -> Path:
+    if template_type != "pdf":
+        output_file = render_template(template_type, input_xml=input_xml)
+
+    else:
+        tex_file = render_template("tex", input_xml=input_xml)
+        output_file = build_latex(tex_file)
+
+    return output_file
+
+
 if __name__ == "__main__":
     cli()
