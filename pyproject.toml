@@ -6,7 +6,7 @@ authors = ["Keaton Guderian <keagud@protonmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.11"
 xmlschema = "^2.5.0"
 xsdata = { version = "^23.8", extras = ["cli"]}
 jinja2 = "^3.1.2"
