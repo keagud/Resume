@@ -10,7 +10,7 @@ from itertools import chain, repeat
 from os import chdir
 from pathlib import Path
 
-from definitions import ASSETS_DIR, DATA_DIR, OUTPUT_DIR, TEMPLATES_DIR
+from resume_definitions import ASSETS_DIR, DATA_DIR, OUTPUT_DIR, TEMPLATES_DIR
 from jinja2 import Environment, FileSystemLoader
 from xmlschema import XMLSchema
 
