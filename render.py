@@ -9,10 +9,22 @@ from contextlib import contextmanager
 from itertools import chain, repeat
 from os import chdir
 from pathlib import Path
+from typing import Final
 
-from resume_definitions import ASSETS_DIR, DATA_DIR, OUTPUT_DIR, TEMPLATES_DIR
+
 from jinja2 import Environment, FileSystemLoader
 from xmlschema import XMLSchema
+
+ROOT_DIR: Final = Path(__file__).parent
+
+ASSETS_DIR: Final = ROOT_DIR.joinpath("assets")
+OUTPUT_DIR: Final = ROOT_DIR.joinpath("output")
+DATA_DIR: Final = ROOT_DIR.joinpath("data")
+TEMPLATES_DIR: Final = ROOT_DIR.joinpath("templates")
+
+
+for p in [ROOT_DIR, ASSETS_DIR, DATA_DIR, TEMPLATES_DIR]:
+    assert p.exists() and p.is_dir()
 
 schema_path = DATA_DIR.joinpath("schema.xsd")
 xml_path = DATA_DIR.joinpath("resume.xml")
