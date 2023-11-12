@@ -260,8 +260,10 @@ def cli():
         tex_file = render_template("tex", input_xml=args.xml)
         output_file = build_latex(tex_file)
 
-    print(str(output_file))
-    return output_file
+    if args.output_file:
+        print(shutil.move(output_file, Path(args.output_file)))
+
+
 
 
 def build_resume(template_type: str, input_xml: Path | None = None) -> Path:
