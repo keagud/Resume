@@ -16,11 +16,7 @@
 
   {% if style is defined %}
   <style>
-    {
-        {
-        style|safe
-      }
-    }
+    {{ style|safe }}
   </style>
   {% endif %}
 
