@@ -64,8 +64,7 @@
   <xs:complexType name="ExperienceLocationType">
     <xs:sequence>
       <xs:element name="ExperienceLocationName" type="xs:string" />
-      <xs:element name="ExperienceRole" type="ExperienceRoleType" />
-      <xs:element name="ActionBullet" type="xs:string" maxOccurs="unbounded" />
+      <xs:element name="ExperienceRole" type="ExperienceRoleType" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 
@@ -75,6 +74,7 @@
       <xs:element name="StartDate" type="DateType" minOccurs="0" />
       <xs:element name="EndDate" type="DateType" minOccurs="0" />
       <xs:element name="RoleDescription" type="xs:string" minOccurs="0" />
+      <xs:element name="ActionBullet" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
 

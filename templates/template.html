@@ -16,7 +16,11 @@
 
   {% if style is defined %}
   <style>
-    {{ style|safe }}
+    {
+        {
+        style|safe
+      }
+    }
   </style>
   {% endif %}
 
@@ -69,7 +73,8 @@
     <ul>
       {% for degree in education.school.degree %}
       <li class="education-degree-desc">
-          <span class="education-degree-type">{{ degree.degree_type }},</span> <span class="education-degree-field">{{ degree.field }}</span>
+        <span class="education-degree-type">{{ degree.degree_type }},</span> <span class="education-degree-field">{{
+          degree.field }}</span>
       </li>
 
       {% if not loop.last %}
@@ -142,19 +147,29 @@
     <h2 class="section-title">Experience</h2>
 
     {% for loc in experience.experience_location %}
-    {% set exp_role = loc.experience_role %}
+    {% set exp_roles = loc.experience_role %}
 
     <div class="experience-item">
 
       <h3 class="past-job-company"> {{ loc.experience_location_name }}</h3>
 
+      {% for exp_role in exp_roles %}
       <span class="past-job-header">
+
         <span class="past-job-title">
           {{exp_role.role_name}}
         </span>
         <span class="past-job-timespan">
+
+
           {% set start = exp_role.start_date %}
+          {% if exp_role.end_date is defined %}
+
           {% set end = exp_role.end_date %}
+
+
+
+
           {#
           <!-- Display the month only if the duration is less than a year-->
           #}
@@ -164,12 +179,21 @@
           {% else %}
           {{ start.year }}-{{ end.year }}
           {% endif %}
+
+            {% else %}
+             
+            {{ start.year }}- present
+
+
+            {% endif %}
         </span>
       </span>
 
       {% if exp_role.role_description %}
       <p class="past-job-description">{{ exp_role.role_description }}</p>
       {% endif %}
+
+      {% endfor %}
 
       {% if loc.action_bullet %}
       <ul>
