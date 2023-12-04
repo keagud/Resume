@@ -180,18 +180,28 @@
           {{ start.year }}-{{ end.year }}
           {% endif %}
 
-            {% else %}
-             
-            {{ start.year }}- present
+          {% else %}
+
+          {{ start.year }}- present
 
 
-            {% endif %}
+          {% endif %}
         </span>
       </span>
 
       {% if exp_role.role_description %}
       <p class="past-job-description">{{ exp_role.role_description }}</p>
       {% endif %}
+
+
+      {% if exp_role.action_bullet %}
+      <ul>
+        {% for point in exp_role.action_bullet %}
+        <li class="past-job-bullet-point">{{ point }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
 
       {% endfor %}
 
