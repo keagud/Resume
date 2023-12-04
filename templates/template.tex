@@ -238,51 +238,27 @@
 
         \sectiontitle{Experience} 
         \sectioncontent{
-
-    {% for loc in experience.experience_location %}
-    {% set exp_role = loc.experience_role %}
-
-        {% set start = exp_role.start_date %}
-        {% set end = exp_role.end_date %}
-
-        {#
-        %% Display the month only if the duration is less than a year-
-        #}
-
-        {% if end.year == start.year %}
-          {% set time_display  = "%s - %s"|format(start.strftime("%B %Y"), end.strftime("%B %Y" )) %}
-        {% else %}
-          {% set time_display = "%d - %d"|format(start.year, end.year) %}
-        {% endif %}
-
-
+    {%- for loc in experience.experience_location %}
+    {% set exp_roles = loc.experience_role %}
         \begingroup
-      \textbf{ {{ loc.experience_location_name }} }\hfill\color{black!70}\small{ {{time_display}} }
+      \textbf{ {{ loc.experience_location_name }} }
         \endgroup
-        \textit{ {{exp_role.role_name}} }
+        \smallskip
+        {%- for exp_role in exp_roles %}
+          {% set start = exp_role.start_date %}
+        \begingroup
+          \textit{ \underline{ {{exp_role.role_name}} } }\hfill\color{black!70}\small{  {% if exp_role.end_date is defined %} {% set end = exp_role.end_date %} {% if end.year == start.year %} {{ start.strftime("%B %Y")}} - {{ end.strftime("%B %Y" )}} {% else %} {{ start.year }}-{{ end.year }} {% endif %} {% else %} {{ start.year }}- present {% endif %} }
+        \endgroup
 
-        {% if exp_role.role_description or loc.action_bullet %}
-      \begin{itemize}
-
-        {% if exp_role.role_description %}
-        \item {{ exp_role.role_description }}
-            {% endif %}
-            {% if loc.action_bullet %}
-              {% for point in loc.action_bullet %}
-                  \item {{point}}
+        {% if exp_role.action_bullet %}
+          \begin{itemize}
+              {% for point in exp_role.action_bullet %}
+              \item {{ point }}
                 {% endfor %}
-            {% endif %}
-      \end{itemize}
-      {% endif %}
-
-        {% if not loop.last %}
-          \smallskip
+          \end{itemize}
         {% endif %}
-
-        {% endfor %}
-        }
-
-
+        {%- endfor %}
+        {%- endfor %} }
 
 
         

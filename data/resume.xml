@@ -81,26 +81,21 @@
         <RoleName>Programming Intern</RoleName>
         <StartDate>2023-07</StartDate>
         <EndDate>2023-10</EndDate>
-
-        <ActionBullet>
-        Wrote internal tools in Python and C Sharp to automatically fetch up-to-date vendor reports
-        via Amazon's
-        seller API, reducing the time required for daily administrative tasks by an order of
-        magnetude.
-      </ActionBullet>
         <ActionBullet>
         Designed, implemented, and tested database schemas representing complex product
         relationships for use with Postgres
-      </ActionBullet>
-
-        <ActionBullet>
-        Trained and deployed a Recurrent Neural Network using Tensorflow to automate various
-        orginization tasks involving optical character recognition
       </ActionBullet>
       </ExperienceRole>
       <ExperienceRole>
         <RoleName>Developer</RoleName>
         <StartDate>2023-10</StartDate>
+        <ActionBullet>
+        Wrote internal tools in Python and C Sharp to automatically fetch up-to-date vendor reports via Amazon's seller API, reducing the time required for daily administrative tasks by an order of magnetude.
+      </ActionBullet>
+        <ActionBullet>
+        Trained and deployed a Recurrent Neural Network using Tensorflow to automate various orginization tasks involving optical character recognition
+      </ActionBullet>
+
       </ExperienceRole>
     </ExperienceLocation>
 
