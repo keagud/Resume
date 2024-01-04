@@ -8,6 +8,7 @@ import subprocess
 from contextlib import contextmanager
 from itertools import chain, repeat
 from os import chdir
+import os
 from pathlib import Path
 from typing import Final
 
@@ -242,6 +243,9 @@ def render_template(template_type: str, input_xml: Path | None = None) -> Path:
 
     output_file = output_dir.joinpath("resume").with_suffix(file_suffix).resolve()
 
+    if output_file.exists():
+        output_file.unlink()
+
     with open(output_file, "w") as fp:
         fp.write(rendered_content)
 
@@ -262,8 +266,6 @@ def cli():
 
     if args.output_file:
         print(shutil.move(output_file, Path(args.output_file)))
-
-
 
 
 def build_resume(template_type: str, input_xml: Path | None = None) -> Path:
