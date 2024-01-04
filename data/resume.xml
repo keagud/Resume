@@ -78,17 +78,8 @@
     <ExperienceLocation>
       <ExperienceLocationName>Boxwave</ExperienceLocationName>
       <ExperienceRole>
-        <RoleName>Programming Intern</RoleName>
-        <StartDate>2023-07</StartDate>
-        <EndDate>2023-10</EndDate>
-        <ActionBullet>
-        Designed, implemented, and tested database schemas representing complex product
-        relationships for use with Postgres
-      </ActionBullet>
-      </ExperienceRole>
-      <ExperienceRole>
         <RoleName>Developer</RoleName>
-        <StartDate>2023-10</StartDate>
+        <StartDate>2023-07</StartDate>
         <ActionBullet>
         Wrote internal tools in Python and C Sharp to automatically fetch up-to-date vendor reports via Amazon's seller API, reducing the time required for daily administrative tasks by an order of magnetude.
       </ActionBullet>
@@ -221,6 +212,20 @@
         </ProjectBullet>
 
       </ProjectDescription>
+    </Project>
+
+    <Project>
+
+      <ProjectTitle>GPTui</ProjectTitle>
+      <ProjectTech>Rust</ProjectTech>
+      <ProjectLink>https://github.com/keagud/gptui</ProjectLink>
+      <ProjectDescription>
+        <ProjectBullet>A modern terminal user interface for the OpenAI chat completions API</ProjectBullet>
+        <ProjectBullet>Includes: asynchronous token streaming display, syntax highlighting in code blocks, system clipboard integration, and local conversation history storage via Sqlite</ProjectBullet>
+
+      </ProjectDescription>
+
+
     </Project>
 
     <Project>
