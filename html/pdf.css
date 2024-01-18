@@ -1,0 +1,132 @@
+@import url(https://fonts.bunny.net/css?family=ibm-plex-mono:400,400i,700,700i|ibm-plex-sans:400,400i,700);
+
+.stack * + * {
+  margin-block-start: 1.5rem;
+}
+
+:root {
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+body {
+  font-family: "IBM Plex Sans";
+  margin-left: 10%;
+  margin-right: 10%;
+  color: #111;
+  line-height: 1.3em;
+  font-size: 1em;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+
+.page-header {
+  font-size: 2em;
+  margin-bottom: 0%;
+}
+
+.resume-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: dotted 2px;
+}
+
+.links label::after {
+  content: ": ";
+}
+
+.links label {
+  font-size: 1em;
+}
+
+.links {
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  font-family: var(--font-mono);
+  margin-top: 1%;
+}
+
+.resume-section li {
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+.section-title {
+  text-decoration: underline;
+  font-size: 1.4em;
+}
+.personal-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration-line: underline;
+}
+a:link,
+a:visited {
+  color: cornflowerblue;
+}
+a:hover {
+  font-weight: bold;
+}
+a:active {
+  color: hotpink;
+  text-decoration: none;
+}
+#section-nav-bar {
+  display: none;
+}
+.section-nav-bar-link {
+  display: hidden;
+  display: inline-block;
+  padding: 0 1em;
+  margin-bottom: 1.3em;
+}
+.past-job-company {
+  text-decoration: underline;
+}
+.past-job-title {
+  font-style: italic;
+}
+.resume-section {
+  border-bottom: solid 0.1em;
+}
+#projects ul {
+  list-style: none;
+}
+.project-title-header {
+  font-family: "Courier";
+}
+.project-header,
+.past-job-header,
+.education-institution-summary {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: dotted;
+  align-content: end;
+}
+.project-item {
+  padding-bottom: 3em;
+}
+.project-keywords,
+.past-job-timespan,
+.education-timespan,
+.programming-language-item,
+.lang-name,
+.education-degree-field {
+  font-style: italic;
+}
+.project-title-header,
+.education-institution-name {
+  font-size: 1.2em;
+  margin-bottom: 0%;
+}
+.education-degree-type {
+  font-weight: bold;
+}

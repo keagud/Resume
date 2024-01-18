@@ -131,7 +131,7 @@
         <SkillName>Flask</SkillName>
       </SkillBullet>
       <SkillBullet>
-        <SkillName>SQL</SkillName>
+        <SkillName>SQL (Postgres, Sqlite)</SkillName>
       </SkillBullet>
       <SkillBullet>
         <SkillName>Docker</SkillName>
@@ -228,62 +228,91 @@
 
     </Project>
 
-    <Project>
-      <ProjectTitle>Linelog</ProjectTitle>
-      <ProjectTech>
-        Python
-      </ProjectTech>
-
-      <ProjectLink>https://github.com/keagud/linelog</ProjectLink>
-
-      <ProjectDescription>
-
-
-        <ProjectBullet>A development productivity tool that calculates the number of lines of code
-          commited in Git by a given user, over a given interval of time, and displays the results
-          as a curses-style graph on the command line broken down by language. Definitions for what
-          should count as a "line" are fully customizable for each filetype.
-        </ProjectBullet>
-
-      </ProjectDescription>
-
-    </Project>
-
 
     <Project>
-      <ProjectTitle>Quackbot</ProjectTitle>
-      <ProjectTech>
-        Javascript
-      </ProjectTech>
+      <ProjectTitle>Tarot</ProjectTitle>
 
       <ProjectTech>
         Typescript
       </ProjectTech>
 
       <ProjectTech>
-        NodeJS
+        React
       </ProjectTech>
 
+      <ProjectTech>
+        Express.js
+      </ProjectTech>
 
-      <ProjectLink>https://github.com/keagud/quackbot</ProjectLink>
+      <ProjectTech>
+        HTML/CSS
+      </ProjectTech>
 
+      <ProjectLink>https://github.com/keagud/tarot</ProjectLink>
       <ProjectDescription>
-
-
-        <ProjectBullet>
-          A Discord bot with a modular design, allowing features and commands to be easily swapped
-          out. Current functionality includes: fortune telling with a simulated Tarot deck,
-          generation of images based on a macro, user search of Wikipedia.
-        </ProjectBullet>
-
-        <ProjectBullet>
-          Written in Typescript and Javascript using Node.js and npm. Hosted on Google Cloud, with
-          building and deployment fully automated using a Github Actions CI/CD workflow script
+        <ProjectBullet> A demo React/Express web that draws and presents random Tarot cards. Viewable at pentacles.fly.dev.
         </ProjectBullet>
 
       </ProjectDescription>
 
     </Project>
+
+    <!-- <Project> -->
+    <!--   <ProjectTitle>Linelog</ProjectTitle> -->
+    <!--   <ProjectTech> -->
+    <!--     Python -->
+    <!--   </ProjectTech> -->
+
+    <!--   <ProjectLink>https://github.com/keagud/linelog</ProjectLink> -->
+
+    <!--   <ProjectDescription> -->
+
+
+    <!--     <ProjectBullet>A development productivity tool that calculates the number of lines of code -->
+    <!--       commited in Git by a given user, over a given interval of time, and displays the results -->
+    <!--       as a curses-style graph on the command line broken down by language. Definitions for what -->
+    <!--       should count as a "line" are fully customizable for each filetype. -->
+    <!--     </ProjectBullet> -->
+
+    <!--   </ProjectDescription> -->
+
+    <!-- </Project> -->
+
+
+    <!-- <Project> -->
+    <!--   <ProjectTitle>Quackbot</ProjectTitle> -->
+    <!--   <ProjectTech> -->
+    <!--     Javascript -->
+    <!--   </ProjectTech> -->
+
+    <!--   <ProjectTech> -->
+    <!--     Typescript -->
+    <!--   </ProjectTech> -->
+
+    <!--   <ProjectTech> -->
+    <!--     NodeJS -->
+    <!--   </ProjectTech> -->
+
+
+    <!--   <ProjectLink>https://github.com/keagud/quackbot</ProjectLink> -->
+
+    <!--   <ProjectDescription> -->
+
+
+    <!--     <ProjectBullet> -->
+    <!--       A Discord bot with a modular design, allowing features and commands to be easily swapped -->
+    <!--       out. Current functionality includes: fortune telling with a simulated Tarot deck, -->
+    <!--       generation of images based on a macro, user search of Wikipedia. -->
+    <!--     </ProjectBullet> -->
+
+    <!--     <ProjectBullet> -->
+    <!--       Written in Typescript and Javascript using Node.js and npm. Hosted on Google Cloud, with -->
+    <!--       building and deployment fully automated using a Github Actions CI/CD workflow script -->
+    <!--     </ProjectBullet> -->
+
+    <!--   </ProjectDescription> -->
+
+    <!-- </Project> -->
 
   </Projects>
 

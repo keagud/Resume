@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <title>resume</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <meta name="description" content="" />
+
+  <link rel="icon" href="favicon.png" />
+
+  
+  <style>
+    
+body {
+  font-family:"Helvetica";
+  margin-left: 20%;
+  margin-right: 20%;
+background-color: #fffff8;
+      color: #111;
+  max-width:1400px;
+  line-height: 1.3em;
+
+  font-size: 20px;
+
+}
+
+
+ 
+.section-title {
+  text-decoration:underline;
+  font-family:"Courier"
+}
+
+
+
+div#basic-info {
+  font-family:"Courier";
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  border-bottom:none;
+}
+
+
+a:link, a:visited {
+  color: cornflowerblue;
+  text-decoration: none;
+}
+
+
+a:hover{
+  font-weight: bold;
+}
+
+a:active{
+  color: hotpink;
+  text-decoration: none;
+
+}
+
+#section-nav-bar{
+
+  margin: auto;
+  padding-top: 3em;
+  text-align: center;
+  font-family:"Courier";
+  border-bottom:solid;
+
+}
+
+.section-nav-bar-link{
+  display: inline-block;
+  padding: 0 1em;
+
+  margin-bottom:1.3em;
+}
+
+
+.past-job-company {
+  text-decoration: underline;
+
+}
+
+.past-job-title{ font-style:  italic; }
+
+
+.resume-section{
+
+  border-bottom: solid .1em;
+
+
+}
+
+
+#projects  > ul{
+  list-style:none;
+}
+
+.project-title-header{
+
+  font-family:"Courier";
+
+}
+
+.project-header, .past-job-header, .education-institution-summary{
+ display: flex; 
+  justify-content: space-between;
+  border-bottom: dotted;
+}
+
+.project-item {
+  padding-bottom:3em;
+
+}
+
+.project-keywords, .past-job-timespan, .education-timespan,  .programming-language-item, .lang-name, .education-degree-field { 
+  font-style:italic; 
+}
+
+.project-title-header,  .education-institution-name{
+  font-weight:bold;
+  font-size:1.3em;
+
+}
+
+
+.education-degree-type {
+  font-weight: bold;
+}
+
+
+  </style>
+  
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="resume-section" id="basic-info">
+
+    <h1 id="full-name">
+      Keaton Guderian
+    </h1>
+
+    <div id="contact">
+      <div id="email">
+        <a id="email-mailto-link" href="mailto:keagud@protonmail.com">
+          keagud@protonmail.com
+        </a>
+      </div>
+    </div>
+
+    <div id="links">
+      
+      <div class="site-link">
+        <a href="https://implicit.computer">My Website</a>
+      </div>
+
+      
+      <div class="site-link">
+        <a href="https://github.com/keagud">My Github</a>
+      </div>
+
+      
+    </div>
+  </div>
+
+
+
+  <nav id="section-nav-bar"> </nav>
+
+  
+  <div class="resume-section" id="education">
+    <h2 class="section-title">Education</h2>
+    <span class="education-institution-summary">
+      <span class="education-institution-name">
+        University of Washington, Seattle
+      </span>
+      <span class="education-timespan">
+        2016-2020
+      </span>
+    </span>
+    <ul>
+      
+      <li class="education-degree-desc">
+        <span class="education-degree-type">Batchelor of Arts,</span> <span class="education-degree-field">Linguistics</span>
+      </li>
+
+      
+      <br />
+      
+      
+      <li class="education-degree-desc">
+        <span class="education-degree-type">Batchelor of Science,</span> <span class="education-degree-field">Speech and Hearing Science</span>
+      </li>
+
+      
+      
+    </ul>
+  </div>
+  <br>
+
+
+  
+
+  <div class="resume-section" id="skills">
+    <h2 class="section-title">Skills</h2>
+
+    <div id="skills-section-programming-languages">
+      <h3 class="subsection-title">Programming Languages</h3>
+      
+      <ul>
+        
+        <li> <span class="lang-duration">
+            For 11 years: </span>
+          <span class="lang-name"> Python </span>
+        </li>
+        
+        <li> <span class="lang-duration">
+            For 8 years: </span>
+          <span class="lang-name"> HTML, Javascript </span>
+        </li>
+        
+        <li> <span class="lang-duration">
+            For 4 years: </span>
+          <span class="lang-name"> Rust, C, Typescript </span>
+        </li>
+        
+      </ul>
+
+
+      <div id="skills-section-other-tech">
+        
+        
+
+        <h3 class="subsection-title">Technologies and Frameworks</h3>
+        
+        <ul>
+          
+          <li>
+            Django
+          </li>
+
+          
+          <li>
+            Flask
+          </li>
+
+          
+          <li>
+            SQL (Postgres, Sqlite)
+          </li>
+
+          
+          <li>
+            Docker
+          </li>
+
+          
+          <li>
+            Svelte
+          </li>
+
+          
+          <li>
+            React
+          </li>
+
+          
+
+          
+          <br>
+          
+          <li>
+            Linux user for all personal computing needs for the past 7 years, adept in most common command line utilities in the Linux/Unix environment (bash/zsh, sed, grep, ssh, vim...), as well as the Unix filesystem architecture and API
+          </li>
+
+
+          
+
+          
+
+        </ul>
+        
+
+
+        
+      </div>
+
+    </div>
+  </div>
+
+
+  
+
+  <div class="resume-section" id="experience">
+    <h2 class="section-title">Experience</h2>
+
+    
+    
+
+    <div class="experience-item">
+
+      <h3 class="past-job-company"> Ikolith Recreations</h3>
+
+      
+      <span class="past-job-header">
+
+        <span class="past-job-title">
+          Contractor
+        </span>
+        <span class="past-job-timespan">
+
+
+          
+          
+
+          
+
+
+
+
+          
+
+          
+          2021-2022
+          
+
+          
+        </span>
+      </span>
+
+      
+      <p class="past-job-description">Contract work doing technical "odd jobs" for a local Seattle-based independent tabletop game studio.</p>
+      
+
+
+      
+      <ul>
+        
+        <li class="past-job-bullet-point">Wrote and managed utility scripts, mostly in Python and bash, to automate workflow tasks such as document formatting.</li>
+        
+        <li class="past-job-bullet-point">Developed an automated pipeline to convert and compile Markdown documentation into Latex for publication.</li>
+        
+        <li class="past-job-bullet-point">Created a program to partially simulate the evolution of a fictional language over time as a worldbuilding and writing aid</li>
+        
+      </ul>
+      
+
+
+      
+
+      
+      
+    
+
+    <div class="experience-item">
+
+      <h3 class="past-job-company"> Boxwave</h3>
+
+      
+      <span class="past-job-header">
+
+        <span class="past-job-title">
+          Developer
+        </span>
+        <span class="past-job-timespan">
+
+
+          
+          
+
+          2023- present
+
+
+          
+        </span>
+      </span>
+
+      
+
+
+      
+      <ul>
+        
+        <li class="past-job-bullet-point">Wrote internal tools in Python and C Sharp to automatically fetch up-to-date vendor reports via Amazon's seller API, reducing the time required for daily administrative tasks by an order of magnetude.</li>
+        
+        <li class="past-job-bullet-point">Trained and deployed a Recurrent Neural Network using Tensorflow to automate various orginization tasks involving optical character recognition</li>
+        
+      </ul>
+      
+
+
+      
+
+      
+      
+    </div>
+  </div>
+
+  </div>
+
+
+  
+  <div class="resume-section" id="projects">
+    
+
+    <h2 class="section-title">Projects</h2>
+    <ul>
+
+      
+      <li class="project-item">
+        <span class="project-header">
+          <span class="project-title-header">
+            <a href="https://github.com/keagud/resume"> Resume </a>
+          </span>
+
+          <span class="project-keywords">
+            
+            <span class="project-keyword">
+              Python,
+            </span>
+
+            
+            <span class="project-keyword">
+              TeX,
+            </span>
+
+            
+            <span class="project-keyword">
+              HTML/CSS,
+            </span>
+
+            
+            <span class="project-keyword">
+              Shell
+            </span>
+
+            
+
+          </span>
+        </span>
+
+        <ul class="project-bullet-points-list">
+          
+          
+          <li>
+            A series of scripts to validate, populate, and render a resume based on an XML document. Yes, this document you are currently reading is also a programming project.
+          </li>
+          
+          <li>
+            HTML and TeX versions are generated simultaneously using the Jinja2 template language, to ensure the Web and PDF versions remain in sync.
+          </li>
+          
+          
+        </ul>
+        </span>
+        </span>
+      </li>
+
+      
+      <li class="project-item">
+        <span class="project-header">
+          <span class="project-title-header">
+            <a href="https://github.com/keagud/gptui"> GPTui </a>
+          </span>
+
+          <span class="project-keywords">
+            
+            <span class="project-keyword">
+              Rust
+            </span>
+
+            
+
+          </span>
+        </span>
+
+        <ul class="project-bullet-points-list">
+          
+          
+          <li>
+            A modern terminal user interface for the OpenAI chat completions API
+          </li>
+          
+          <li>
+            Includes: asynchronous token streaming display, syntax highlighting in code blocks, system clipboard integration, and local conversation history storage via Sqlite
+          </li>
+          
+          
+        </ul>
+        </span>
+        </span>
+      </li>
+
+      
+      <li class="project-item">
+        <span class="project-header">
+          <span class="project-title-header">
+            <a href="https://github.com/keagud/tarot"> Tarot </a>
+          </span>
+
+          <span class="project-keywords">
+            
+            <span class="project-keyword">
+              Typescript,
+            </span>
+
+            
+            <span class="project-keyword">
+              React,
+            </span>
+
+            
+            <span class="project-keyword">
+              Express.js,
+            </span>
+
+            
+            <span class="project-keyword">
+              HTML/CSS
+            </span>
+
+            
+
+          </span>
+        </span>
+
+        <ul class="project-bullet-points-list">
+          
+          
+          <li>
+            A demo React/Express web that draws and presents random Tarot cards. Viewable at pentacles.fly.dev.
+          </li>
+          
+          
+        </ul>
+        </span>
+        </span>
+      </li>
+
+      
+    </ul>
+  </div>
+
+
+  
+  <div class="resume-section" id="other-interests">
+
+    <br>
+    <h2 class="section-title">Other Interests</h2>
+    <ul>
+      
+      
+      <li>Ancient languages (Latin, Attic Greek)</li>
+      
+      <li>Ancient languages (Lisp, C89, Ada)</li>
+      
+      <li>Constructed Languages</li>
+      
+      <li>Distance running, cycling</li>
+      
+      
+    </ul>
+  </div>
+
+
+
+  <script>
+
+    window.addEventListener("DOMContentLoaded", function () {
+      const sectionTitles = document.getElementsByClassName("section-title");
+      const navLinks = document.getElementById("section-nav-bar");
+
+      for (let i = 0; i < sectionTitles.length; i++) {
+        const sectionTitle = sectionTitles[i].textContent;
+        const listItem = document.createElement("li");
+
+        listItem.className = "section-nav-bar-link"
+
+        const link = document.createElement("a");
+
+        link.textContent = sectionTitle;
+        link.href = "#" + sectionTitle.replace(/\s+/g, "-").toLowerCase();
+
+        listItem.appendChild(link);
+        navLinks.appendChild(listItem);
+      }
+    });
+
+
+  </script>
+</body>
+
+
+</html>
