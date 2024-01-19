@@ -9,9 +9,9 @@
     <style>
       @import url(https://fonts.bunny.net/css?family=ibm-plex-mono:400,400i,700,700i|ibm-plex-sans:400,400i,700);
 
-.stack * + * {
-  margin-block-start: 1.5rem;
-}
+/* .stack * + * { */
+/*   margin-block-start: 1.5rem; */
+/* } */
 
 :root {
   --font-mono: "IBM Plex Mono", monospace;
@@ -39,8 +39,9 @@ body {
 
 .resume-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   border-bottom: dotted 2px;
+  padding-bottom: 1em;
 }
 
 .links label::after {
@@ -72,6 +73,38 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.tech-skill,
+.lang-name {
+  font-family: var(--font-mono);
+}
+
+.lang-duration {
+  font-style: italic;
+}
+
+.lang-duration::after {
+  content: "";
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10%;
+  flex-direction: row;
+}
+
+#other-interests ul,
+#skills-section-other-tech ul {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  /* column-count: 2; */
+  list-style-type: "-";
+}
+
+span.lang-duration::after {
+  margin-left: 0.5rem;
 }
 
 a {
@@ -106,11 +139,34 @@ a:active {
 .resume-section {
   border-bottom: solid 0.1em;
 }
-#projects ul {
+
+.skill-subsection-title,
+.subsection-title {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.skill-subsection-title {
+  font-weight: normal;
+  font-size: 1.1em;
+  text-decoration-line: underline;
+}
+
+.subsection-title {
+  font-size: 1.2em;
+}
+ul {
+  list-style-type: "- ";
+}
+
+#projects > ul {
   list-style: none;
 }
-.project-title-header {
-  font-family: "Courier";
+.project-title-header a {
+  font-family: var(--font-mono);
+  text-decoration-line: none;
+  margin-bottom: 1%;
+  font-weight: bold;
 }
 .project-header,
 .past-job-header,
@@ -121,13 +177,12 @@ a:active {
   align-content: end;
 }
 .project-item {
-  padding-bottom: 3em;
+  padding-bottom: 1em;
 }
 .project-keywords,
 .past-job-timespan,
 .education-timespan,
 .programming-language-item,
-.lang-name,
 .education-degree-field {
   font-style: italic;
 }
@@ -151,16 +206,23 @@ a:active {
 
       <div class="links">
         <div class="site-link">
+          <label for="personal-site-link"> Website</label>
+          <a id="personal-site-link" href="https://implicit.computer">
+            implicit.computer
+          </a>
+        </div>
+
+        <div class="site-link">
           <label for="email-mailto-link"> Email</label>
           <a id="email-mailto-link" href="mailto:keagud@protonmail.com"
             >keagud@protonmail.com</a
           >
         </div>
         <div class="site-link">
-          <label for="personal-site-link"> Website</label>
-          <a id="personal-site-link" href="https://implicit.computer">
-            implicit.computer
-          </a>
+          <label for="linkedin-link"> LinkedIn </label>
+          <a id="linkedin-link" href="www.linkedin.com/in/keagud">
+            linkedin.com/in/keagud</a
+          >
         </div>
         <div class="site-link">
           <label for="github-link"> Github</label>
@@ -191,12 +253,13 @@ a:active {
         </li>
       </ul>
     </div>
-    <br />
     <div class="resume-section" id="skills">
       <h2 class="section-title">Skills</h2>
       <div class="skills-container">
         <div id="skills-section-programming-languages">
-          <h3 class="subsection-title">Programming Languages</h3>
+          <span class="container">
+            <h3 class="skill-subsection-title">Programming Languages</h3>
+          </span>
           <ul>
             <li>
               <span class="lang-duration">For 11 years:</span>
@@ -211,17 +274,21 @@ a:active {
               <span class="lang-name">Rust, C, Typescript</span>
             </li>
           </ul>
-          <div id="skills-section-other-tech">
-            <h3 class="subsection-title">Technologies and Frameworks</h3>
-            <ul>
-              <li>Django</li>
-              <li>Flask</li>
-              <li>SQL (Postgres, Sqlite)</li>
-              <li>Docker</li>
-              <li>Svelte</li>
-              <li>React</li>
-            </ul>
-          </div>
+        </div>
+        <div id="skills-section-other-tech">
+          <span class="container">
+            <h3 class="skill-subsection-title">Technologies and Frameworks</h3>
+          </span>
+          <ul>
+            <li class="tech-skill">Django</li>
+            <li class="tech-skill">Flask</li>
+            <li class="tech-skill">Postgres</li>
+            <li class="tech-skill">Sqlite</li>
+            <li class="tech-skill">Docker</li>
+            <li class="tech-skill">Svelte</li>
+            <li class="tech-skill">React</li>
+            <li class="tech-skill">Express.js</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -233,10 +300,6 @@ a:active {
           ><span class="past-job-title">Contractor</span>
           <span class="past-job-timespan">2021-2022</span></span
         >
-        <p class="past-job-description">
-          Contract work doing technical "odd jobs" for a local Seattle-based
-          independent tabletop game studio.
-        </p>
         <ul>
           <li class="past-job-bullet-point">
             Wrote and managed utility scripts, mostly in Python and bash, to
@@ -337,14 +400,14 @@ a:active {
           <ul class="project-bullet-points-list">
             <li>
               A demo React/Express web that draws and presents random Tarot
-              cards. Viewable at pentacles.fly.dev.
+              cards. Viewable at
+              <a href="https://pentacles.page">pentacles.page.</a>
             </li>
           </ul>
         </li>
       </ul>
     </div>
     <div class="resume-section" id="other-interests">
-      <br />
       <h2 class="section-title">Other Interests</h2>
       <ul>
         <li>Ancient languages (Latin, Attic Greek)</li>

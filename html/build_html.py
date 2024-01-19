@@ -2,6 +2,10 @@ import datetime as dt
 from jinja2 import FileSystemLoader, Environment
 from pathlib import Path
 
+from pdfkit import from_file
+
+def html_to_pdf(input_file: Path, output_pdf: Path):
+    from_file(str(input_file), str(output_pdf))
 
 def insert_css(input_html: Path, output_html: Path, css_file: Path):
     loader = FileSystemLoader(input_html.parent)
@@ -18,10 +22,6 @@ def insert_css(input_html: Path, output_html: Path, css_file: Path):
 
 
 def main():
-    pass
-
-
-if __name__ == "__main__":
     print(f"RUNNING {dt.datetime.now().isoformat()}")
 
     kwargs = dict(
@@ -32,4 +32,10 @@ if __name__ == "__main__":
 
     insert_css(**kwargs)
 
+    html_to_pdf(Path("./output_pdf.html"), Path("./f.pdf"))
 
+
+
+
+if __name__ == "__main__":
+    main()
