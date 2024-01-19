@@ -67,13 +67,10 @@
       </ul>
     </div>
     <div class="resume-section" id="skills">
-      <h2 class="section-title">Skills</h2>
       <div class="skills-container">
         <div id="skills-section-programming-languages">
-          <span class="container">
-            <h3 class="skill-subsection-title">Programming Languages</h3>
-          </span>
-          <ul>
+          <h3 class="subsection-title" >Programming Languages</h3>
+          <ul id="programming-languages-list">
             <li>
               <span class="lang-duration">For 11 years:</span>
               <span class="lang-name">Python</span>
@@ -89,10 +86,8 @@
           </ul>
         </div>
         <div id="skills-section-other-tech">
-          <span class="container">
-            <h3 class="skill-subsection-title">Technologies and Frameworks</h3>
-          </span>
-          <ul>
+          <h3 class="subsection-title">Other Technical Skills</h3>
+          <ul id="skill-list">
             <li class="tech-skill">Django</li>
             <li class="tech-skill">Flask</li>
             <li class="tech-skill">Postgres</li>
@@ -153,27 +148,22 @@
       <h2 class="section-title">Projects</h2>
       <ul>
         <li class="project-item">
-          <span class="project-header"
-            ><span class="project-title-header"
-              ><a href="https://github.com/keagud/resume">Resume</a></span
-            >
-            <span class="project-keywords"
-              ><span class="project-keyword">Python,</span>
-              <span class="project-keyword">TeX,</span>
-              <span class="project-keyword">HTML/CSS,</span>
-              <span class="project-keyword">Shell</span></span
-            ></span
-          >
+          <span class="project-header" >
+            <span class="project-title-header" >
+              <a href="https://github.com/keagud/dateparse">Dateparse
+              </a>
+            </span > 
+            <span class="project-keywords">
+              <span class="project-keyword">Python</span> 
+            </span>
+          </span>
+
+
           <ul class="project-bullet-points-list">
             <li>
-              A series of scripts to validate, populate, and render a resume
-              based on an XML document. Yes, this document you are currently
-              reading is also a programming project.
-            </li>
-            <li>
-              HTML and TeX versions are generated simultaneously using the
-              Jinja2 template language, to ensure the Web and PDF versions
-              remain in sync.
+              A pure Python library for parsing natural
+              language expressions about time, like "two weeks ago", "a week
+              before Christmas", "in four months" into Python date objects.
             </li>
           </ul>
         </li>

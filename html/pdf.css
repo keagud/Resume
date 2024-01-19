@@ -10,11 +10,11 @@
 
 body {
   font-family: "IBM Plex Sans";
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
   color: #111;
-  line-height: 1.3em;
-  font-size: 1em;
+  line-height: 1.2em;
+  font-size: 0.9em;
 }
 .container {
   display: flex;
@@ -31,7 +31,7 @@ body {
 .resume-header {
   display: flex;
   justify-content: space-around;
-  border-bottom: dotted 2px;
+  border-bottom: solid 2px;
   padding-bottom: 1em;
 }
 
@@ -58,7 +58,7 @@ body {
 
 .section-title {
   text-decoration: underline;
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 .personal-links {
   display: flex;
@@ -81,7 +81,8 @@ body {
 
 .skills-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-content: start;
   padding-right: 10%;
   flex-direction: row;
 }
@@ -90,6 +91,7 @@ body {
 #skills-section-other-tech ul {
   display: grid;
   grid-template-columns: 50% 50%;
+  column-gap: 10%;
   /* column-count: 2; */
   list-style-type: "-";
 }
@@ -115,14 +117,9 @@ a:active {
 #section-nav-bar {
   display: none;
 }
+
 .section-nav-bar-link {
   display: hidden;
-  display: inline-block;
-  padding: 0 1em;
-  margin-bottom: 1.3em;
-}
-.past-job-company {
-  text-decoration: underline;
 }
 .past-job-title {
   font-style: italic;
@@ -131,20 +128,21 @@ a:active {
   border-bottom: solid 0.1em;
 }
 
-.skill-subsection-title,
 .subsection-title {
   margin-bottom: 0;
-  margin-top: 0;
+  margin-top: 2%;
+  text-decoration-line: underline;
+
 }
 
 .skill-subsection-title {
   font-weight: normal;
-  font-size: 1.1em;
+  font-size: 1em;
   text-decoration-line: underline;
 }
 
 .subsection-title {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 ul {
   list-style-type: "- ";
@@ -164,11 +162,12 @@ ul {
 .education-institution-summary {
   display: flex;
   justify-content: space-between;
-  border-bottom: dotted;
+  border-bottom: 2px dotted;
+  margin-bottom: 2%;
   align-content: end;
 }
 .project-item {
-  padding-bottom: 1em;
+  padding-bottom: 0.2em;
 }
 .project-keywords,
 .past-job-timespan,
@@ -179,9 +178,14 @@ ul {
 }
 .project-title-header,
 .education-institution-name {
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin-bottom: 0%;
 }
 .education-degree-type {
   font-weight: bold;
+}
+
+#other-interests{
+  border: none;
+
 }
