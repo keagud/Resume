@@ -29,7 +29,7 @@ function renderPdf(inputFile, inputStylesFile) {
   (async () => {
     const html = populateTemplateStyles(inputFile, inputStylesFile);
 
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({ headless: 'new' });
     const page = await browser.newPage();
     await page.setContent(html);
     await page.pdf({ path: getPath("output/output.pdf"), format: "A4" });
@@ -42,6 +42,9 @@ function main() {
   const pdfStyles = getPath("css/pdf.css");
   const webStyles = getPath("css/web.css");
   const baseFile = getPath("base.html");
+
+
+  fs.mkdirSync(getPath("output"), { recursive: true, });
 
   const desiredFormat = process.argv[2];
   console.log(desiredFormat);
