@@ -29,7 +29,12 @@ function renderPdf(inputFile, inputStylesFile) {
   (async () => {
     const html = populateTemplateStyles(inputFile, inputStylesFile);
 
-    const browser = await puppeteer.launch({ headless: 'new' });
+    const browser = await puppeteer.launch({
+      headless: 'new',
+      // YES this is a huge security hole 
+      // but we're not actually connecting Chromium to the internet at all, just using the renderer, so it's fine
+      args: ['--no-sandbox']
+    });
     const page = await browser.newPage();
     await page.setContent(html);
     await page.pdf({ path: getPath("output/output.pdf"), format: "A4" });
