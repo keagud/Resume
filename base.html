@@ -7,20 +7,23 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
 
-  <style>
+  <!-- <link rel="stylesheet" href="../css/web.css" /> -->
+
+<style>
     {{{ styles }}}
-  </style>
+    </style>
 
 </head>
+
 
 <body>
   <div class="resume-header">
     <div class="full-name">
       <h1 id="full-name" class="page-header">Keaton Guderian</h1>
-        <div class="role-title">
-          <h2>Information Technology Technician</h2>
+      <div class="role-title">
+        <h2>Information Technology Technician</h2>
 
-        </div>
+      </div>
     </div>
 
     <div class="links">
@@ -49,7 +52,7 @@
     </div>
   </div>
 
-  <div class="resume-section" id="education">
+  <section class="resume-section" id="education">
     <h2 class="section-title">Education</h2>
     <span class="education-institution-summary detail-elipsis"><span class="education-institution-name">University of
         Washington, Seattle</span>
@@ -64,38 +67,51 @@
         <span class="education-degree-field">Speech and Hearing Science</span>
       </li>
     </ul>
-  </div>
-  <div class="resume-section" id="skills">
-    <div class="skills-container">
-      <div id="skills-section-other-tech">
-        <h3 class="subsection-title"> Skills</h3>
-        <ul id="skill-list">
+  </section>
 
-          <li class="tech-skill">Python</li>
-          <li class="tech-skill">Powershell</li>
-          <li class="tech-skill">POSIX Shell (bash/zsh)</li>
-          <li class="tech-skill">Windows Server</li>
-          <li>Active Directory</li>
-          <li class="tech-skill">Linux (Debian-based and Fedora-based)</li>
-          <li class="tech-skill">Django</li>
-          <li class="tech-skill">Docker</li>
-          <li class="tech-skill">Postgres</li>
-        </ul>
-      </div>
+  <section>
+    <div class="columns-container">
 
-      <div id="skill-certs">
-        <h3>Certifications</h3>
-        <ul>
-          <li>COMPTIA A+</li>
+      <div class="col-set">
+        <div class="column-title-container">
+          <h3 class="section-title">Skills</h3>
+        </div>
+        <div class="cols-content">
+          <ul class="skills-list">
 
-        </ul>
+            <li>Active Directory</li>
+            <li>Django</li>
+            <li>Docker</li>
+            <li>Linux</li>
+            <li>POSIX Shell (bash/zsh)</li>
+            <li>Postgres</li>
+            <li>Powershell</li>
+            <li>Python</li>
+            <li>Windows Server</li>
+          </ul>
+        </div>
 
       </div>
 
+      <div class="col-set">
+
+        <div class="column-title-container">
+          <h3 class="section-title">Certifications</h3>
+        </div>
+
+        <div class="cols-content">
+          <ul class="certifications-list">
+              <li>CompTIA A+</li>
+          </ul>
+
+        </div>
+
+      </div>
 
     </div>
+  </section>
 
-  </div>
+
 
   <div class="resume-section" id="experience">
     <h2 class="section-title">Experience</h2>
@@ -135,7 +151,8 @@
           </li>
           <li class="past-job-bullet-point"">Maintained a Proxmox cluster for hosting various internal web services, and spearheaded the design, implementation, testing, and deployment of automation scripts. </li>
 
-          <li class=" past-job-bullet-point">Acted as the primary technical liaison to management and effectively communicated complex technical concepts to stakeholders </li>
+          <li class=" past-job-bullet-point">Acted as the primary technical liaison to management and effectively
+            communicated complex technical concepts to stakeholders </li>
         </ul>
         </ul>
       </div>
