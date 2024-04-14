@@ -1,202 +1,458 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>resume</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
 
-<head>
-  <meta charset="UTF-8" />
-  <title>resume</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="" />
+    <style>
+      @import url(https://fonts.bunny.net/css?family=ibm-plex-mono:400,400i,700,700i|ibm-plex-sans:400,400i,700);
 
-  <link rel="stylesheet" href="../css/web.css" />
+:root {
+  --font-mono: "IBM Plex Mono", monospace;
+}
 
-</head>
+body {
+  font-family: "IBM Plex Sans";
+  color: #43444e;
+  background-color: #fffeea;
+}
 
+@media screen {
+  body {
+    line-height: 1.3em;
+    font-size: 1.2em;
+    margin-left: 8%;
+    margin-right: 8%;
+  }
 
-<body>
-  <header>
-    <div class="full-name">
-      <h1 id="full-name" class="page-header">Keaton Guderian</h1>
-      <div class="role-title">
-        <h2>Computer Enjoyer</h2>
+  #full-name {
+    font-size: 2em;
+    margin-bottom: 0%;
+  }
 
-      </div>
-    </div>
+  .subsection-title {
+    margin-bottom: 0;
+    margin-top: 2%;
+    text-decoration-line: underline;
+  }
+}
 
-    <div id="links-container">
-      <div class="site-link">
-        <label for="personal-site-link"> Website</label>
-        <a id="personal-site-link" href="https://implicit.computer">
-          implicit.computer
-        </a>
-      </div>
+@media print {
+  @page {
+    size: 8.5in 11in;
+    margin: "4cm";
+  }
 
-      <div class="site-link">
-        <label for="email-mailto-link"> Email</label>
-        <a id="email-mailto-link" href="mailto:keaton@alloquor.net">keaton@alloquor.net</a>
-      </div>
-      <div class="site-link">
-        <label for="linkedin-link"> LinkedIn </label>
-        <a id="linkedin-link" href="https://linkedin.com/in/keatong">
-          linkedin.com/in/keatong</a>
-      </div>
-      <div class="site-link">
-        <label for="github-link"> Github</label>
-        <a id="github-link" href="https://github.com/keagud">
-          github.com/keagud
-        </a>
-      </div>
-    </div>
-  </header>
+  body {
+    page-break-inside: avoid;
+  }
 
-  <main>
+  .page-header {
+    margin-bottom: 1%;
+  }
 
-    <section class="resume-section columns-container" id="education">
+  div.full-name * {
+    margin-top: 0%;
+    margin-bottom: 0%;
+  }
 
+  section * {
+    margin-top: 0.7%;
+    margin-bottom: 0.2%;
+  }
 
-      <div>
-        <h2 class="section-title">Education</h2>
-        <span class="education-institution-summary detail-elipsis"><span class="education-institution-name">University
-            of Washington, Seattle</span>
-          <span class="education-timespan">2016-2020</span></span>
-        <ul>
-          <li class="education-degree-desc">
-            <span class="education-degree-type">Batchelor of Arts,</span>
-            <span class="education-degree-field">Linguistics</span>
-          </li>
-          <li class="education-degree-desc">
-            <span class="education-degree-type">Batchelor of Science,</span>
-            <span class="education-degree-field">Speech and Hearing Science</span>
-          </li>
-        </ul>
-      </div>
-      <div class="certs-container">
+  section#projects ul {
+    line-height: 0.9em;
+  }
 
-        <h2 class="section-title">Certifications</h2>
-        <ul class="certifications-list">
-          <li>CompTIA A+</li>
-        </ul>
-      </div>
-    </section>
+  div.experience-item ul li {
+    font-size: 0.9em;
+    line-height: 1em;
+  }
 
+  div.experience-item .past-job-header {
+    margin-top: 0.3%;
+  }
 
-    <section id="skills">
-      <h2 class="section-title"> Skills </h2>
-      <ul class="skills-list">
+  .past-job-company {
+    margin-top: 0.5%;
+    margin-bottom: 0.2%;
+    padding-bottom: 0%;
+    font-style: italic;
+  }
 
-        <li>Active Directory</li>
-        <li>Django</li>
-        <li>Docker</li>
-        <li>Linux</li>
-        <li>POSIX Shell (bash/zsh)</li>
-        <li>Postgres</li>
-        <li>Powershell</li>
-        <li>Python</li>
-        <li>Windows Server</li>
-      </ul>
+  .experience-item + .experience-item {
+    margin-top: 1%;
+  }
+}
 
-    </section>
+section {
+  border-bottom: 1px solid black;
+}
 
-    <section id="experience">
-      <h2 class="section-title">Experience</h2>
-      <div class="experience-item">
-        <h3 class="past-job-company">Ikolith Recreations</h3>
-        <span class="past-job-header">
-          <h4 class="past-job-title">Technical Contractor</h4>
-          <span class="past-job-timespan">2021-2022</span>
-        </span>
-        <ul>
-          <li class="past-job-bullet-point">
-            Wrote and managed utility scripts, mostly in Python and bash, to
-            automate workflow tasks such as document formatting.
-          </li>
-          <li class="past-job-bullet-point">
-            Developed an automated pipeline to convert and compile Markdown
-            documentation into Latex for publication.
-          </li>
-          <li class="past-job-bullet-point">
-            Created a program to partially simulate the evolution of a fictional
-            language over time as a worldbuilding and writing aid
-          </li>
-        </ul>
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  border-bottom: solid 2px;
+  padding-bottom: 2%;
+}
+
+.columns-container {
+  display: flex;
+  /* column-gap: 5%; */
+  align-items: start;
+  /* grid-template-columns: 50% 40%; */
+}
+
+.certs-container {
+  padding-left: 10%;
+}
+
+.skills-list {
+  column-count: 3;
+  list-style-type: none;
+}
+
+.certifications-list {
+  column-count: 1;
+  list-style-type: none;
+}
+
+div.role-title {
+  font-style: italic;
+}
+
+#links-container label::after {
+  content: ": ";
+}
+
+#links-container label {
+  font-size: 1em;
+}
+
+#links-container {
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  font-family: var(--font-mono);
+  margin-top: 1%;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+.experience-item li,
+div#projects li {
+  margin-top: 1%;
+}
+
+.section-title {
+  text-decoration: underline;
+  font-size: 1.2em;
+}
+.personal-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.skills-list li,
+.lang-name {
+  font-family: var(--font-mono);
+}
+
+#other-interests ul {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  column-gap: 3%;
+  list-style-type: none;
+}
+
+section#projects > ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration-line: underline;
+}
+
+a:link,
+a:visited {
+  color: cornflowerblue;
+}
+a:hover {
+  font-weight: bold;
+}
+a:active {
+  color: hotpink;
+  text-decoration: none;
+}
+#section-nav-bar {
+  display: none;
+}
+
+.section-nav-bar-link {
+  display: hidden;
+}
+.past-job-title {
+  font-family: var(--font-mono);
+}
+.resume-section {
+  border-bottom: solid 0.1em;
+}
+
+.skill-subsection-title {
+  font-weight: normal;
+  font-size: 1em;
+  text-decoration-line: underline;
+}
+
+.subsection-title {
+  font-size: 1.1em;
+}
+
+.project-title-header a {
+  font-family: var(--font-mono);
+  text-decoration-line: none;
+  margin-bottom: 1%;
+  font-weight: bold;
+}
+.project-header,
+.past-job-header,
+.education-institution-summary {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px dotted;
+  margin-bottom: 2%;
+  align-content: end;
+}
+.project-item {
+  padding-bottom: 0.2em;
+}
+.project-keywords,
+.past-job-timespan,
+.education-timespan,
+.programming-language-item,
+.education-degree-field {
+  font-style: italic;
+}
+.project-title-header,
+.education-institution-name {
+  font-size: 1em;
+  margin-bottom: 0%;
+}
+.education-degree-type {
+  font-weight: bold;
+}
+
+#other-interests {
+  border: none;
+}
+
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="full-name">
+        <h1 id="full-name" class="page-header">Keaton Guderian</h1>
+        <div class="role-title">
+          <h2>Computer Enjoyer</h2>
         </div>
-          <div class="experience-item">
-            <h3 class="past-job-company">Boxwave</h3>
-            <span class="past-job-header">
-              <h4 class="past-job-title">IT Applications Developer</h4>
-              <span class="past-job-timespan">2023- February 2024</span>
-            </span>
-            <ul>
-              <li class="past-job-bullet-point">
-                Wrote internal tools in Python and C Sharp to automatically fetch
-                up-to-date vendor reports via Amazon's seller API, reducing the
-                time required for daily administrative tasks by an order of
-                magnitude.
-              </li>
+      </div>
 
-              <li class="past-job-bullet-point"">Maintained a Proxmox cluster for hosting various internal web services, and spearheaded the design, implementation, testing, and deployment of automation scripts. </li>
-
-          <li class=" past-job-bullet-point">Acted as the primary technical liaison to management and effectively
-                communicated complex technical concepts to stakeholders </li>
-            </ul>
-          </div>
+      <div id="links-container">
+        <div class="site-link">
+          <label for="personal-site-link"> Website</label>
+          <a id="personal-site-link" href="https://implicit.computer">
+            implicit.computer
+          </a>
         </div>
-    </section>
 
-    <section id="projects">
-      <h2 class="section-title">Projects</h2>
-      <ul>
-        <li class="project-item">
-          <span class="project-header">
-            <span class="project-title-header">
-              <a href="https://github.com/keagud/dateparse">Dateparse
-              </a>
-            </span>
-            <span class="project-keywords">
-              <span class="project-keyword">Python</span>
-            </span>
+        <div class="site-link">
+          <label for="email-mailto-link"> Email</label>
+          <a id="email-mailto-link" href="mailto:keaton@alloquor.net"
+            >keaton@alloquor.net</a
+          >
+        </div>
+        <div class="site-link">
+          <label for="linkedin-link"> LinkedIn </label>
+          <a id="linkedin-link" href="https://linkedin.com/in/keatong">
+            linkedin.com/in/keatong</a
+          >
+        </div>
+        <div class="site-link">
+          <label for="github-link"> Github</label>
+          <a id="github-link" href="https://github.com/keagud">
+            github.com/keagud
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="resume-section columns-container" id="education">
+        <div>
+          <h2 class="section-title">Education</h2>
+          <span class="education-institution-summary detail-elipsis"
+            ><span class="education-institution-name"
+              >University of Washington, Seattle</span
+            >
+            <span class="education-timespan">2016-2020</span></span
+          >
+          <ul>
+            <li class="education-degree-desc">
+              <span class="education-degree-type">Batchelor of Arts,</span>
+              <span class="education-degree-field">Linguistics</span>
+            </li>
+            <li class="education-degree-desc">
+              <span class="education-degree-type">Batchelor of Science,</span>
+              <span class="education-degree-field"
+                >Speech and Hearing Science</span
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="certs-container">
+          <h2 class="section-title">Certifications</h2>
+          <ul class="certifications-list">
+            <li>CompTIA A+</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2 class="section-title">Skills</h2>
+        <ul class="skills-list">
+          <li>Active Directory</li>
+          <li>Django</li>
+          <li>Docker</li>
+          <li>Linux</li>
+          <li>POSIX Shell (bash/zsh)</li>
+          <li>Postgres</li>
+          <li>Powershell</li>
+          <li>Python</li>
+          <li>Windows Server</li>
+        </ul>
+      </section>
+
+      <section id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-item">
+          <h3 class="past-job-company">Ikolith Recreations</h3>
+          <span class="past-job-header">
+            <h4 class="past-job-title">Technical Contractor</h4>
+            <span class="past-job-timespan">2021-2022</span>
           </span>
-
-
-          <ul class="project-bullet-points-list">
-            <li>
-              A pure Python library for parsing natural
-              language expressions about time, like "two weeks ago", "a week
-              before Christmas", "in four months" into Python date objects.
+          <ul>
+            <li class="past-job-bullet-point">
+              Wrote and managed utility scripts, mostly in Python and bash, to
+              automate workflow tasks such as document formatting.
+            </li>
+            <li class="past-job-bullet-point">
+              Developed an automated pipeline to convert and compile Markdown
+              documentation into Latex for publication.
+            </li>
+            <li class="past-job-bullet-point">
+              Created a program to partially simulate the evolution of a
+              fictional language over time as a worldbuilding and writing aid
             </li>
           </ul>
-        </li>
+        </div>
+        <div class="experience-item">
+          <h3 class="past-job-company">Boxwave</h3>
+          <span class="past-job-header">
+            <h4 class="past-job-title">IT Applications Developer</h4>
+            <span class="past-job-timespan">2023- February 2024</span>
+          </span>
+          <ul>
+            <li class="past-job-bullet-point">
+              Wrote internal tools in Python and C Sharp to automatically fetch
+              up-to-date vendor reports via Amazon's seller API, reducing the
+              time required for daily administrative tasks by an order of
+              magnitude.
+            </li>
 
-        <li class="project-item">
-          <span class="project-header"><span class="project-title-header"><a
-                href="https://github.com/keagud/tarot">Tarot</a></span>
-            <span class="project-keywords"><span class="project-keyword">Typescript,</span>
-              <span class="project-keyword">React,</span>
-              <span class="project-keyword">Express.js,</span>
-              <span class="project-keyword">HTML/CSS</span></span></span>
-          <ul class="project-bullet-points-list">
-            <li>
-              A demo React/Express web app that draws and presents random Tarot
-              cards. Viewable at
-              <a href="https://pentacles.page">pentacles.page.</a>
+            <li class="past-job-bullet-point">
+              Maintained a Proxmox cluster for hosting various internal web
+              services, and spearheaded the design, implementation, testing, and
+              deployment of automation scripts.
+            </li>
+
+            <li class="past-job-bullet-point">
+              Acted as the primary technical liaison to management and
+              effectively communicated complex technical concepts to
+              stakeholders
             </li>
           </ul>
-        </li>
-      </ul>
-    </section>
+        </div>
+      </section>
 
-    <section id="other-interests">
-      <h2 class="section-title">Other Interests</h2>
-      <ul>
-        <li>Ancient languages (Latin, Attic Greek)</li>
-        <li>Ancient languages (Lisp, C89, Ada)</li>
-        <li>Constructed Languages</li>
-        <li>Distance running, cycling</li>
-      </ul>
+      <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <ul>
+          <li class="project-item">
+            <span class="project-header">
+              <span class="project-title-header">
+                <a href="https://github.com/keagud/dateparse">Dateparse </a>
+              </span>
+              <span class="project-keywords">
+                <span class="project-keyword">Python</span>
+              </span>
+            </span>
 
-    </section>
-  </main>
+            <ul class="project-bullet-points-list">
+              <li>
+                A pure Python library for parsing natural language expressions
+                about time, like "two weeks ago", "a week before Christmas", "in
+                four months" into Python date objects.
+              </li>
+            </ul>
+          </li>
 
+          <li class="project-item">
+            <span class="project-header"
+              ><span class="project-title-header"
+                ><a href="https://github.com/keagud/tarot">Tarot</a></span
+              >
+              <span class="project-keywords"
+                ><span class="project-keyword">Typescript,</span>
+                <span class="project-keyword">React,</span>
+                <span class="project-keyword">Express.js,</span>
+                <span class="project-keyword">HTML/CSS</span></span
+              ></span
+            >
+            <ul class="project-bullet-points-list">
+              <li>
+                A demo React/Express web app that draws and presents random
+                Tarot cards. Viewable at
+                <a href="https://pentacles.page">pentacles.page.</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
 
-</body>
-
+      <section id="other-interests">
+        <h2 class="section-title">Other Interests</h2>
+        <ul>
+          <li>Ancient languages (Latin, Attic Greek)</li>
+          <li>Ancient languages (Lisp, C89, Ada)</li>
+          <li>Constructed Languages</li>
+          <li>Distance running, cycling</li>
+        </ul>
+      </section>
+    </main>
+  </body>
 </html>

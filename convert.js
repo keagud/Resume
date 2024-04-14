@@ -1,6 +1,5 @@
 "use strict";
 
-
 const puppeteer = require('puppeteer');
 const Handlebars = require('handlebars');
 const fs = require('fs');
@@ -36,18 +35,16 @@ function renderPdf(inputFile, inputStylesFile) {
       args: ['--no-sandbox']
     });
     const page = await browser.newPage();
-    await page.setContent(html);
-    await page.pdf({ path: getPath("output/output.pdf"), format: "A4" });
+    await page.setContent(html, {waitUntil: 'networkidle0'});
+    await page.pdf({ path: getPath("output/output.pdf"), format: "A4", preferCSSPageSize: true });
     await browser.close();
   })();
 
 }
 
 function main() {
-  const pdfStyles = getPath("css/pdf.css");
-  const webStyles = getPath("css/web.css");
+  const stylesFile = getPath("css/styles.css");
   const baseFile = getPath("base.html");
-
 
   fs.mkdirSync(getPath("output"), { recursive: true, });
 
@@ -56,11 +53,11 @@ function main() {
 
   switch (desiredFormat?.toLowerCase()) {
     case "pdf":
-      renderPdf(baseFile, pdfStyles);
+      renderPdf(baseFile, stylesFile);
       break;
 
     case "web":
-      const webHtml = populateTemplateStyles(baseFile, webStyles);
+      const webHtml = populateTemplateStyles(baseFile, stylesFile);
       fs.writeFileSync(getPath("output/output.html"), webHtml);
       break;
 
