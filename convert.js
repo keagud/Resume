@@ -29,7 +29,7 @@ function populateTemplateStyles(inputFile, styleFile) {
 
 const renderWeb = () => {
   const webHtml = populateTemplateStyles(baseFile, stylesFile);
-  fs.writeFileSync(getPath("output/output.html"), webHtml);
+  fs.writeFileSync(getPath("output/resume.html"), webHtml);
   return webHtml;
 }
 
@@ -51,7 +51,7 @@ function renderPdf(inputFile, inputStylesFile) {
     });
     const page = await browser.newPage();
     await page.setContent(html, { waitUntil: 'networkidle0' });
-    await page.pdf({ path: getPath("output/output.pdf"), format: "A4", preferCSSPageSize: true });
+    await page.pdf({ path: getPath("output/resume.pdf"), format: "A4", preferCSSPageSize: true });
     await browser.close();
   })();
 
