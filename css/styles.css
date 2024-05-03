@@ -60,14 +60,14 @@ body {
     line-height: 0.9em;
   }
 
-  div.experience-item ul li {
-    font-size: 0.9em;
-    line-height: 1em;
-  }
+  /* div.experience-item ul li { */
+  /*   font-size: 0.9em; */
+  /*   line-height: 1em; */
+  /* } */
 
-  div.experience-item .past-job-header {
-    margin-top: 0.3%;
-  }
+  /* div.experience-item .past-job-header { */
+  /*   margin-top: 0.3%; */
+  /* } */
 
   .past-job-company {
     margin-top: 0.5%;
