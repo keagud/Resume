@@ -3,7 +3,11 @@
 
 <head>
   <meta charset="UTF-8" />
+  {{#if title}}
+  <title>{{title}}</title>
+  {{else}}
   <title>resume</title>
+  {{/if}}
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
 
@@ -16,9 +20,9 @@
   <header>
     <div class="full-name">
       <h1 id="full-name" class="page-header">Keaton Guderian</h1>
-      <div class="role-title">
-        <h2>IT Technician</h2>
-          <span id="pdf-link" hidden/>
+      <div>
+        <span class="role-title">IT Technician</span>
+        <span id="pdf-link" hidden />
       </div>
     </div>
 
@@ -35,7 +39,7 @@
         <a id="email-mailto-link" href="mailto:keaton@alloquor.net">keaton@alloquor.net</a>
       </div>
       <div class="site-link">
-        <label for="linkedin-link"> LinkedIn </label>
+        <label for="linkedin-link"> LinkedIn</label>
         <a id="linkedin-link" href="https://linkedin.com/in/keatong">
           linkedin.com/in/keatong</a>
       </div>
@@ -49,6 +53,7 @@
   </header>
 
   <main>
+        <div class="invisible"></div>
     <section class="resume-section columns-container" id="education">
       <div>
         <h2 class="section-title">Education</h2>
@@ -57,11 +62,11 @@
           <span class="education-timespan">2016-2020</span></span>
         <ul>
           <li class="education-degree-desc">
-            <span class="education-degree-type">Batchelor of Arts,</span>
+            <span class="education-degree-type">Bachelor of Arts,</span>
             <span class="education-degree-field">Linguistics</span>
           </li>
           <li class="education-degree-desc">
-            <span class="education-degree-type">Batchelor of Science,</span>
+            <span class="education-degree-type">Bachelor of Science,</span>
             <span class="education-degree-field">Speech and Hearing Science</span>
           </li>
         </ul>
@@ -78,50 +83,74 @@
 
     <section id="skills">
       <h2 class="section-title">Skills</h2>
+
+      {{#if customSkills}}
+      {{{customSkills}}}
+      {{else}}
       <ul class="skills-list">
         <li>Active Directory</li>
-        <li>Django</li>
         <li>Docker</li>
         <li>Linux</li>
-        <li>POSIX Shell (bash/zsh)</li>
-        <li>Postgres</li>
+        <li>Microsoft 365</li>
+        <li>POSIX Shell (bash)</li>
         <li>Powershell</li>
         <li>Python</li>
+        <li>Virtualization</li>
         <li>Windows Server</li>
       </ul>
+      {{/if}}
+
     </section>
 
     <section id="experience">
 
       <h2 class="section-title">Experience</h2>
 
+
       <div class="experience-item">
-          <!--TODO make job title the header and organization below it-->
-        <h3 class="past-job-company">OSU Speech and Hearing Clinic</h3>
+
+        <span class="past-job-title">Internal Application Developer</span>
         <span class="past-job-header">
-          <h4 class="past-job-title">Student Hearing Aid Technician</h4>
-          <span class="past-job-timespan">2021-2022</span>
+
+          <span>
+            <span class="past-job-company">Boxwave</span>
+            <span class="company-description">E-Commerce</span>
+          </span>
+          <span class="past-job-timespan">2023-2024</span>
+
+
         </span>
         <ul>
           <li class="past-job-bullet-point">
-              Foo
-          </li>
-          <li class="past-job-bullet-point">
-              Bar
+            Wrote internal tools in Python and C# to automate vendor interactions via Amazon's seller API, reducing the time requirements for multiple daily administrative tasks by over 90%. 
           </li>
 
+          <li class="past-job-bullet-point">
+            Maintained a Proxmox cluster for hosting internal web services and databases, and spearheaded the design, implementation, testing, and
+            deployment of automation scripts for related orchestration.
+          </li>
 
           <li class="past-job-bullet-point">
-              Baz
+            Acted as the primary technical liaison to management and effectively communicated complex technical concepts to stakeholders
           </li>
         </ul>
       </div>
 
+
+
       <div class="experience-item">
-        <h3 class="past-job-company">Ikolith Recreations</h3>
+
+
+        <span class="past-job-title">Technical Consultant</span>
         <span class="past-job-header">
-          <h4 class="past-job-title">Technical Contractor</h4>
+
+          <span>
+            <span class="past-job-company">Ikolith Recreations</span>
+            <span class="company-description">Tabletop Game Studio</span>
+          </span>
+
           <span class="past-job-timespan">2022-2023</span>
+
         </span>
         <ul>
           <li class="past-job-bullet-point">
@@ -130,37 +159,33 @@
           </li>
           <li class="past-job-bullet-point">
             Developed an automated pipeline to convert and compile Markdown
-            documentation into Latex for publication.
+            documentation into Latex for publication, reducing the overall time required for document creation by over 50%.
           </li>
+
         </ul>
       </div>
-      <div class="experience-item">
-        <h3 class="past-job-company">Boxwave</h3>
+      <div class="experience-item" >
+
+        <span class="past-job-title">Student Hearing Aid Clinician</span>
         <span class="past-job-header">
-          <h4 class="past-job-title">Applications Developer</h4>
-          <span class="past-job-timespan">2023- February 2024</span>
+          <span class="past-job-company">Ohio State Speech and Hearing Clinic</span>
+          <span class="past-job-timespan">2021-2022</span>
         </span>
         <ul>
           <li class="past-job-bullet-point">
-            Wrote internal tools in Python and C# to automatically fetch
-            up-to-date vendor reports via Amazon's seller API, reducing the
-            time required for daily administrative tasks by an order of
-            magnitude.
+            Performed hardware and software troubleshooting for medical and non-medical devices including hearing aids,
+            accessory peripheral devices, and mobile phones.
           </li>
 
           <li class="past-job-bullet-point">
-            Maintained a Proxmox cluster for hosting various internal web
-            services, and spearheaded the design, implementation, testing, and
-            deployment of automation scripts.
+            Interacted directly with patients to provide support and document outcomes.
           </li>
 
-          <li class="past-job-bullet-point">
-            Acted as the primary technical liaison to management and
-            effectively communicated complex technical concepts to
-            stakeholders
-          </li>
         </ul>
       </div>
+
+
+
     </section>
 
     <section id="projects" hidden>

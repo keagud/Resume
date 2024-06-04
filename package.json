@@ -1,16 +1,28 @@
 {
-  "name": "html",
+  "name": "resumai",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "watch": "tsc -w"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "@types/yargs": "^17.0.32",
+    "typescript": "^5.4.5"
+  },
   "dependencies": {
+    "@types/node": "^20.12.10",
+    "@types/prompt-sync": "^4.2.3",
+    "args": "^5.0.3",
     "handlebars": "^4.7.8",
-    "puppeteer": "^21.11.0"
+    "openai": "^4.42.0",
+    "prompt-sync": "^4.2.0",
+    "puppeteer": "^22.8.0",
+    "yargs": "^17.7.2"
   }
 }
